@@ -1,5 +1,8 @@
-﻿using FontAwesome.Sharp;
+﻿using ClosedXML.Excel;
+using Datos.Seguridad;
+using FontAwesome.Sharp;
 using Guna.UI.WinForms;
+using Negocio.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -8,6 +11,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
 
 namespace Sistema_Negocio_Ropa
 {
@@ -16,6 +20,7 @@ namespace Sistema_Negocio_Ropa
 
         // Singleton
         private static Utilidades _instancia = null;
+
         private Utilidades()
         {
         }
@@ -41,6 +46,70 @@ namespace Sistema_Negocio_Ropa
         {
             textbox.PasswordChar = '*';
             btnOjo.IconFont = IconFont.Regular;
+        }
+
+        public void ExportarDataGridViewAExcel(DataGridView dgv, string nombreArchivo, string nombreHoja, string modulo)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            if (dgv.Rows.Count < 1)
+            {
+                MessageBox.Show("No hay datos para exportar.", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                DataTable dt = new DataTable();
+                foreach (DataGridViewColumn columna in dgv.Columns)
+                {
+                    dt.Columns.Add(columna.HeaderText, columna.ValueType);
+                }
+
+                foreach (DataGridViewRow row in dgv.Rows)
+                {
+                    if (row.Visible)
+                    {
+                        dt.Rows.Add(row.Cells.Cast<DataGridViewCell>().Select(c => c.Value).ToArray());
+                    }
+                }
+
+                SaveFileDialog savefile = new SaveFileDialog();
+                savefile.FileName = string.Format($"{nombreArchivo}.xlsx");
+                savefile.Filter = "Excel Files | *.xlsx";
+
+                if (savefile.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        using (XLWorkbook wb = new XLWorkbook())
+                        {
+                            var hoja = wb.Worksheets.Add(dt, nombreHoja);
+                            hoja.ColumnsUsed().AdjustToContents();
+
+                            // La ultima columna siempre ponerle tamaño 15
+                            int columnasTotales = hoja.ColumnsUsed().Count();
+                            hoja.Column(columnasTotales).Width = 15;
+
+                            wb.SaveAs(savefile.FileName);
+                            AuditoriaDA auditoriaDA = new AuditoriaDA();
+                            auditoriaDA.RegistrarMovimiento("Exportar", Sesion.ObtenerInstancia.UsuarioEnSesion().ObtenerNombreUsuario(), modulo, $"Archivo excel con nombre ({nombreArchivo}) fue exportado con éxito.");
+                            MessageBox.Show("Datos exportados correctamente.", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    // Catch cuando el archivo está abierto
+                    catch (System.IO.IOException)
+                    {
+                        throw new Exception("El archivo está abierto, por favor cierre el archivo y vuelva a intentarlo.");
+                    }
+                    catch (Exception)
+                    {
+                        throw new Exception("Ocurrió un error al exportar los datos, por favor contacte al administrador para solucionar este error.");
+                    }
+                    finally
+                    {
+                        Cursor.Current = Cursors.Default;
+                    }
+                }
+            }
+            Cursor.Current = Cursors.Default;
         }
 
         public void LimpiarTextbox(params TextBoxBase[] textboxes)

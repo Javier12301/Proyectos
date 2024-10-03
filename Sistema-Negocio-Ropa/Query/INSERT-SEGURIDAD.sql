@@ -28,7 +28,10 @@ VALUES
     ('formUsuarios'),
     ('formGrupos'),
     ('formAuditoria'),
-    ('formMisDatos');
+    ('formMisDatos'),
+	('formNegocio'),
+	('formBackup');
+
 
 -- Insertar las acciones para el módulo formVentas
 INSERT INTO Accion(Nombre, ModuloID)
@@ -89,6 +92,15 @@ VALUES
     ('Permitir_Acceso', (SELECT ModuloID FROM Modulo WHERE Nombre = 'formMisDatos'));
 GO
 
+INSERT INTO Accion(Nombre, ModuloID)
+VALUES 
+    ('Permitir_Acceso', (SELECT ModuloID FROM Modulo WHERE Nombre = 'formBackup'));
+GO
+
+INSERT INTO Accion(Nombre, ModuloID)
+VALUES 
+    ('Permitir_Acceso', (SELECT ModuloID FROM Modulo WHERE Nombre = 'formNegocio'));
+GO
 
 -- PERMISO TOTAL PARA ADMINISTRADORES
 INSERT INTO Permiso (GrupoID, AccionID, Permitido)
@@ -98,3 +110,4 @@ GO
 
 select * from Permiso
 Where GrupoID = 1
+

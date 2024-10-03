@@ -43,6 +43,11 @@ namespace Negocio.Seguridad
             return Password;
         }
 
+        public string ObtenerNombreUsuario()
+        {
+            return NombreUsuario;
+        }
+
         public string ObtenerNombreCompleto()
         {
             return $"{Nombre} {Apellido}";

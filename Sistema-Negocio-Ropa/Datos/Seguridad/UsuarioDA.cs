@@ -1,7 +1,9 @@
 ﻿using Negocio.Seguridad;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.SymbolStore;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,10 +13,12 @@ namespace Datos.Seguridad
     public class UsuarioDA
     {
         private Conexion conexion;
+        private AuditoriaDA auditoriaDA;
 
         public UsuarioDA()
         {
             conexion = new Conexion();
+            auditoriaDA = new AuditoriaDA();
         }
 
         // Comprobar si existe un usuario en el sistema
@@ -48,6 +52,31 @@ namespace Datos.Seguridad
             return existe;
         }
 
+        public bool ExisteCorreo(string correo)
+        {
+            bool existe = false;
+            using (SqlConnection oContexto = conexion.EstablecerConexion())
+            {
+                StringBuilder query = new StringBuilder();
+                query.AppendLine("SELECT COUNT(*) FROM Usuario WHERE Correo COLLATE SQL_Latin1_General_CP1_CS_AS = @Correo");
+                try
+                {
+                    using (SqlCommand cmd = new SqlCommand(query.ToString(), oContexto))
+                    {
+                        cmd.Parameters.AddWithValue("@Correo", correo);
+                        oContexto.Open();
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        existe = count > 0;
+                    }
+                }
+                catch (Exception)
+                {
+                    throw new Exception("Error al verificar si existe el correo, contactar con el administrador del sistema.");
+                }
+            }
+            return existe;
+        }
+
 
 
         // Alta de Usuario
@@ -72,6 +101,8 @@ namespace Datos.Seguridad
                         cmd.Parameters.AddWithValue("@estado", usuario.Estado);
                         oContexto.Open();
                         alta = cmd.ExecuteNonQuery() > 0;
+                        if (alta)
+                            auditoriaDA.RegistrarMovimiento("Alta", Sesion.ObtenerInstancia.UsuarioEnSesion().ObtenerNombreUsuario(), "Usuario", $"Se ha dado de alta un nuevo usuario: {usuario.NombreUsuario}.");
                     }
                 }
                 catch (Exception)
@@ -105,6 +136,8 @@ namespace Datos.Seguridad
                         cmd.Parameters.AddWithValue("@usuarioID", usuario.UsuarioID);
                         oContexto.Open();
                         modificado = cmd.ExecuteNonQuery() > 0;
+                        if (modificado)
+                            auditoriaDA.RegistrarMovimiento("Modificación", Sesion.ObtenerInstancia.UsuarioEnSesion().ObtenerNombreUsuario(), "Usuario", $"Se ha modificado al usuario {usuario.NombreUsuario}");
                     }
                 }catch(Exception)
                 {
@@ -127,9 +160,12 @@ namespace Datos.Seguridad
                     query.AppendLine("WHERE UsuarioID = @usuarioID");
                     using (SqlCommand cmd = new SqlCommand(query.ToString(), oContexto))
                     {
+                        string _nombreUsuario = ObtenerUsuarioPorID(usuarioID).NombreUsuario;
                         cmd.Parameters.AddWithValue("@usuarioID", usuarioID);
                         oContexto.Open();
                         baja = cmd.ExecuteNonQuery() > 0;
+                        if (baja)
+                            auditoriaDA.RegistrarMovimiento("Baja", Sesion.ObtenerInstancia.UsuarioEnSesion().ObtenerNombreUsuario(), "Usuario", $"Se ha dado de baja al usuario con ID: {_nombreUsuario}");
                     }
                 }
                 catch (Exception)
@@ -178,36 +214,43 @@ namespace Datos.Seguridad
 
             using (SqlConnection oContexto = conexion.EstablecerConexion())
             {
-                using(SqlCommand cmd = new SqlCommand("sp_ObtenerUsuarioPorNombre", oContexto))
+                using (SqlCommand cmd = new SqlCommand("sp_ObtenerUsuarioPorNombre", oContexto))
                 {
-                   
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
+
                     try
                     {
                         oContexto.Open();
-                        using(SqlDataReader reader = cmd.ExecuteReader())
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            while (reader.Read())
+                            if (reader.Read()) // Cambiar a if para solo obtener un usuario
                             {
-                                usuario = new Usuario();
-                                usuario.UsuarioID = Convert.ToInt32(reader["UsuarioID"]);
-                                usuario.NombreUsuario = reader["Usuario"].ToString();
-                                usuario.Password = reader["Contrasena"].ToString();
-                                usuario.Nombre = reader["Nombre"].ToString();
-                                usuario.Apellido = reader["Apellido"].ToString();
-                                usuario.Correo = reader["Correo"].ToString();
-                                usuario.Estado = Convert.ToBoolean(reader["Estado"]);
-
-                                Grupo grupo = new Grupo();
-                                grupo.GrupoID = Convert.ToInt32(reader["GrupoID"]);
-                                grupo.Nombre = reader["Gr_Nombre"].ToString();
-                                grupo.Estado = Convert.ToBoolean(reader["Gr_Estado"]);
-                                usuario.oGrupo = grupo;
+                                usuario = new Usuario
+                                {
+                                    UsuarioID = Convert.ToInt32(reader["UsuarioID"]),
+                                    NombreUsuario = reader["Usuario"].ToString(),
+                                    Password = reader["Contrasena"].ToString(),
+                                    Nombre = reader["Nombre"].ToString(),
+                                    Apellido = reader["Apellido"].ToString(),
+                                    Correo = reader["Correo"].ToString(),
+                                    Estado = Convert.ToBoolean(reader["Estado"]),
+                                    oGrupo = new Grupo
+                                    {
+                                        GrupoID = Convert.ToInt32(reader["GrupoID"]),
+                                        Nombre = reader["Gr_Nombre"].ToString(),
+                                        Estado = Convert.ToBoolean(reader["Gr_Estado"])
+                                    }
+                                };
+                            }
+                            else
+                            {
+                                // Si no se encuentra el usuario, puedes lanzar una excepción o devolver null
+                                throw new Exception("Usuario no encontrado.");
                             }
                         }
-
-                    }catch(Exception ex)
+                    }
+                    catch (Exception ex)
                     {
                         throw new Exception("Error al obtener el usuario: " + ex.Message);
                     }
@@ -216,52 +259,93 @@ namespace Datos.Seguridad
             return usuario;
         }
 
+
         // Obtener usuario por ID
-        public Usuario ObtenerUsuarioPorIDD(int usuarioID)
+        public Usuario ObtenerUsuarioPorID(int usuarioID)
         {
-            Usuario oUsuario = new Usuario();
+            Usuario usuario = new Usuario();
             using (SqlConnection oContexto = conexion.EstablecerConexion())
             {
-                try
+                using (SqlCommand cmd = new SqlCommand("sp_ObtenerUsuarioPorID", oContexto))
                 {
-                    StringBuilder query = new StringBuilder();
-                    query.AppendLine("SELECT U.UsuarioID, U.NombreUsuario, U.Contraseña AS Password, U.Nombre AS NombreU, U.Apellido, U.Email, U.DNI, U.GrupoID, U.Estado AS EstadoU,");
-                    query.AppendLine("G.GrupoID, G.Nombre AS NombreG, G.Estado AS EstadoG");
-                    query.AppendLine("FROM Usuario U");
-                    query.AppendLine("INNER JOIN Grupo G ON U.GrupoID = G.GrupoID");
-                    query.AppendLine("WHERE U.UsuarioID = @usuarioID");
-                    using (SqlCommand cmd = new SqlCommand(query.ToString(), oContexto))
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@usuarioID", usuarioID);
+
+                    try
                     {
-                        cmd.Parameters.AddWithValue("@usuarioID", usuarioID);
                         oContexto.Open();
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            while (reader.Read())
+                            if (reader.Read()) // Cambiar a if para que solo obtenga un usuario
                             {
-                                oUsuario.UsuarioID = Convert.ToInt32(reader["UsuarioID"]);
-                                oUsuario.NombreUsuario = reader["NombreUsuario"].ToString();
-                                oUsuario.Password = reader["Password"].ToString();  // Actualizado para coincidir con el modelo
-                                oUsuario.Nombre = reader["NombreU"].ToString();
-                                oUsuario.Apellido = reader["Apellido"].ToString();
-                                oUsuario.Correo = reader["Email"].ToString();
-                                oUsuario.Estado = Convert.ToBoolean(reader["EstadoU"]);
+                                usuario.UsuarioID = Convert.ToInt32(reader["UsuarioID"]);
+                                usuario.NombreUsuario = reader["Usuario"].ToString();
+                                usuario.Password = reader["Contrasena"].ToString();
+                                usuario.Nombre = reader["Nombre"].ToString();
+                                usuario.Apellido = reader["Apellido"].ToString();
+                                usuario.Correo = reader["Correo"].ToString();
+                                usuario.Estado = Convert.ToBoolean(reader["Estado"]);
 
-                                Grupo grupo = new Grupo();
-                                grupo.GrupoID = Convert.ToInt32(reader["GrupoID"]);
-                                grupo.Nombre = reader["NombreG"].ToString();
-                                grupo.Estado = Convert.ToBoolean(reader["EstadoG"]);
-
-                                oUsuario.oGrupo = grupo;
+                                // Asignar grupo si existe
+                                Grupo grupo = new Grupo
+                                {
+                                    GrupoID = Convert.ToInt32(reader["GrupoID"]),
+                                    Nombre = reader["Gr_Nombre"].ToString(),
+                                    Estado = Convert.ToBoolean(reader["Gr_Estado"])
+                                };
+                                usuario.oGrupo = grupo;
+                            }
+                            else
+                            {
+                                // Si no se encuentra el usuario, puedes lanzar una excepción o devolver null
+                                throw new Exception("Usuario no encontrado.");
                             }
                         }
                     }
-                }
-                catch (Exception)
-                {
-                    throw new Exception("Ocurrió un error al obtener el usuario, contactar con el administrador del sistema.");
+                    catch (Exception ex)
+                    {
+                        throw new Exception("Error al obtener el usuario: " + ex.Message);
+                    }
                 }
             }
-            return oUsuario;
+            return usuario;
+        }
+
+
+        // Filtro dinamico para el datagridview de modulo usuario
+        public DataTable ObtenerUsuarioFiltrados(string filtroBuscar, string buscar, string filtroGrupo, string filtroEstado)
+        {
+            // Asignar valores predeterminados si los filtros están vacíos o nulos
+            filtroBuscar = string.IsNullOrWhiteSpace(filtroBuscar) ? "Todos" : filtroBuscar;
+            filtroGrupo = string.IsNullOrWhiteSpace(filtroGrupo) ? "Todos" : filtroGrupo;
+            filtroEstado = string.IsNullOrWhiteSpace(filtroEstado) ? "Todos" : filtroEstado;
+
+            DataTable dt = new DataTable();
+            using (SqlConnection oContexto = conexion.EstablecerConexion())
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_ObtenerUsuariosConFiltros", oContexto))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    // parámetros
+                    cmd.Parameters.AddWithValue("@FiltroBuscar", filtroBuscar);
+                    cmd.Parameters.AddWithValue("@Buscar", string.IsNullOrEmpty(buscar) ? "" : buscar);
+                    cmd.Parameters.AddWithValue("@FiltroGrupo", filtroGrupo);
+                    cmd.Parameters.AddWithValue("@FiltroEstado", filtroEstado);
+
+                    try
+                    {
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        da.Fill(dt);
+                    }
+                    catch (Exception)
+                    {
+                        // Si ocurre una excepción, lo ideal sería lanzar un error, pero para que no se rompa la tabla, enviar datos vacíos
+                        throw new Exception("Ocurrió un error al cargar la grilla de usuarios, contactar con el administrador del sistema.");
+                    }
+                }
+            }
+            return dt;
         }
 
         // ejemplo para conectarse

@@ -12,6 +12,7 @@ using Sistema_Negocio_Ropa.Modal;
 using Negocio.Seguridad;
 using Datos.Seguridad;
 using Sistema_Negocio_Ropa.Principales;
+using Guna.UI.WinForms;
 
 namespace Sistema_Negocio_Ropa
 {
@@ -126,6 +127,19 @@ namespace Sistema_Negocio_Ropa
             Cursor = Cursors.Default;
         }
 
+        private void txtCredenciales_Enter(object sender, EventArgs e)
+        {
+            GunaLineTextBox textbox = (GunaLineTextBox)sender;
+            textbox.LineColor = Color.Gainsboro;
+        }
+
+        private void txtCredenciales_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                IniciarSesion();
+            }
+        }
 
         // Interfaz
 

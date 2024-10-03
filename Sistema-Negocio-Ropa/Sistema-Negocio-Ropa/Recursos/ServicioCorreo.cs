@@ -14,7 +14,7 @@ namespace Sistema_Negocio_Ropa.Recursos
         private readonly string smtpServer = "smtp.gmail.com";
         private readonly int smtpPort = 587;
         private readonly string emailFrom = ConfigurationManager.AppSettings["Email"];
-        private readonly string emailPassword = ConfigurationManager.AppSettings["Contraseña"];
+        private readonly string emailPassword = ConfigurationManager.AppSettings["Contrasena"];
 
         
         // Servicio de Correo SMTP

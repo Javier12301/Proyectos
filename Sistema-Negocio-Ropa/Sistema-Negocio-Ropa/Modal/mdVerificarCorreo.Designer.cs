@@ -52,9 +52,9 @@
             this.pnlControl.Controls.Add(this.gControlCerrar);
             this.pnlControl.Controls.Add(this.lblNombreForm);
             this.pnlControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlControl.Location = new System.Drawing.Point(0, 0);
+            this.pnlControl.Location = new System.Drawing.Point(1, 1);
             this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(368, 38);
+            this.pnlControl.Size = new System.Drawing.Size(366, 38);
             this.pnlControl.TabIndex = 0;
             this.pnlControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
             this.pnlControl.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseMove);
@@ -66,7 +66,7 @@
             this.gControlCerrar.AnimationSpeed = 0.03F;
             this.gControlCerrar.IconColor = System.Drawing.Color.White;
             this.gControlCerrar.IconSize = 15F;
-            this.gControlCerrar.Location = new System.Drawing.Point(316, 0);
+            this.gControlCerrar.Location = new System.Drawing.Point(314, 0);
             this.gControlCerrar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gControlCerrar.Name = "gControlCerrar";
             this.gControlCerrar.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
@@ -97,9 +97,9 @@
             this.panel1.Controls.Add(this.lblUsuario);
             this.panel1.Controls.Add(this.lblMail);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 38);
+            this.panel1.Location = new System.Drawing.Point(1, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(368, 92);
+            this.panel1.Size = new System.Drawing.Size(366, 92);
             this.panel1.TabIndex = 0;
             // 
             // lblInformacion
@@ -207,17 +207,18 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
             this.flowLayoutPanel1.Controls.Add(this.txt1);
             this.flowLayoutPanel1.Controls.Add(this.txt2);
             this.flowLayoutPanel1.Controls.Add(this.txt3);
             this.flowLayoutPanel1.Controls.Add(this.txt4);
             this.flowLayoutPanel1.Controls.Add(this.txt5);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 133);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 132);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(368, 61);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(366, 61);
             this.flowLayoutPanel1.TabIndex = 8;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -225,12 +226,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(368, 194);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "mdVerificarCorreo";
+            this.Padding = new System.Windows.Forms.Padding(1);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mdVerificarCorreo";
             this.Load += new System.EventHandler(this.mdVerificarCorreo_Load);

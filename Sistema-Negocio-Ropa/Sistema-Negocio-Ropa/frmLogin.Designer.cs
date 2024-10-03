@@ -59,9 +59,9 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pnlPrincipal);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(302, 417);
+            this.panel1.Size = new System.Drawing.Size(300, 415);
             this.panel1.TabIndex = 0;
             // 
             // pnlPrincipal
@@ -82,7 +82,7 @@
             this.pnlPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.pnlPrincipal.Location = new System.Drawing.Point(0, 0);
             this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(302, 417);
+            this.pnlPrincipal.Size = new System.Drawing.Size(300, 415);
             this.pnlPrincipal.TabIndex = 2;
             // 
             // btnSalir
@@ -197,7 +197,9 @@
             this.txtContraseñaG.PasswordChar = '*';
             this.txtContraseñaG.Size = new System.Drawing.Size(225, 29);
             this.txtContraseñaG.TabIndex = 2;
-            this.txtContraseñaG.Text = "Reloj12301";
+            this.txtContraseñaG.Text = "Osonegro12301";
+            this.txtContraseñaG.Enter += new System.EventHandler(this.txtCredenciales_Enter);
+            this.txtContraseñaG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCredenciales_KeyPress);
             // 
             // txtUsuarioG
             // 
@@ -212,13 +214,15 @@
             this.txtUsuarioG.Size = new System.Drawing.Size(247, 29);
             this.txtUsuarioG.TabIndex = 1;
             this.txtUsuarioG.Text = "Admin";
+            this.txtUsuarioG.Enter += new System.EventHandler(this.txtCredenciales_Enter);
+            this.txtUsuarioG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCredenciales_KeyPress);
             // 
             // pbLogoEmpresa
             // 
             this.pbLogoEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbLogoEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("pbLogoEmpresa.Image")));
             this.pbLogoEmpresa.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pbLogoEmpresa.Location = new System.Drawing.Point(76, 44);
+            this.pbLogoEmpresa.Location = new System.Drawing.Point(74, 44);
             this.pbLogoEmpresa.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pbLogoEmpresa.Name = "pbLogoEmpresa";
             this.pbLogoEmpresa.Size = new System.Drawing.Size(151, 109);
@@ -231,7 +235,7 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoSize = true;
             this.panel2.Controls.Add(this.lblNombreEmpresa);
-            this.panel2.Location = new System.Drawing.Point(12, 159);
+            this.panel2.Location = new System.Drawing.Point(10, 159);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(278, 48);
             this.panel2.TabIndex = 0;
@@ -246,7 +250,7 @@
             this.lblNombreEmpresa.Name = "lblNombreEmpresa";
             this.lblNombreEmpresa.Size = new System.Drawing.Size(234, 41);
             this.lblNombreEmpresa.TabIndex = 0;
-            this.lblNombreEmpresa.Text = "Sistema de Gestión de Stock";
+            this.lblNombreEmpresa.Text = "Bienvenido";
             this.lblNombreEmpresa.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pnlControl
@@ -257,7 +261,7 @@
             this.pnlControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlControl.Location = new System.Drawing.Point(0, 0);
             this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(302, 38);
+            this.pnlControl.Size = new System.Drawing.Size(300, 38);
             this.pnlControl.TabIndex = 0;
             this.pnlControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
             this.pnlControl.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseMove);
@@ -269,7 +273,7 @@
             this.gControlCerrar.AnimationSpeed = 0.03F;
             this.gControlCerrar.IconColor = System.Drawing.Color.White;
             this.gControlCerrar.IconSize = 15F;
-            this.gControlCerrar.Location = new System.Drawing.Point(250, 0);
+            this.gControlCerrar.Location = new System.Drawing.Point(248, 0);
             this.gControlCerrar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gControlCerrar.Name = "gControlCerrar";
             this.gControlCerrar.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
@@ -296,10 +300,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(302, 417);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
+            this.Padding = new System.Windows.Forms.Padding(1);
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

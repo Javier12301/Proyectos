@@ -3,68 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5884F1A4-0F26-40B3-9447-75B612F801F3}|Datos\\Datos.csproj|C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\datos\\seguridad\\usuarioda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5884F1A4-0F26-40B3-9447-75B612F801F3}|Datos\\Datos.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\datos\\seguridad\\usuarioda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5884F1A4-0F26-40B3-9447-75B612F801F3}|Datos\\Datos.csproj|solutionrelative:datos\\seguridad\\usuarioda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\sistema-negocio-ropa\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\modal\\seguridad\\mdusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\modal\\seguridad\\mdusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\sistema-negocio-ropa\\modal\\mdcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\modal\\mdcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\principales\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\principales\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13C633C2-27AB-41FD-AFE4-E8D65FC1EF08}|Negocio\\Negocio.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\negocio\\seguridad\\sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13C633C2-27AB-41FD-AFE4-E8D65FC1EF08}|Negocio\\Negocio.csproj|solutionrelative:negocio\\seguridad\\sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\principales\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\principales\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5884F1A4-0F26-40B3-9447-75B612F801F3}|Datos\\Datos.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\datos\\seguridad\\grupoda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5884F1A4-0F26-40B3-9447-75B612F801F3}|Datos\\Datos.csproj|solutionrelative:datos\\seguridad\\grupoda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\principales\\seguridad\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\principales\\seguridad\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\sistema-negocio-ropa\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\principales\\seguridad\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\principales\\seguridad\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\sistema-negocio-ropa\\modal\\mdrecuperarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\modal\\mdrecuperarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\sistema-negocio-ropa\\modal\\mdrecuperarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\modal\\mdrecuperarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\sistema-negocio-ropa\\modal\\mdverificarcorreo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\modal\\mdverificarcorreo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\sistema-negocio-ropa\\modal\\mdverificarcorreo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\modal\\mdverificarcorreo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\sistema-negocio-ropa\\modal\\mdcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\modal\\mdcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\modal\\seguridad\\mdusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\modal\\seguridad\\mdusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5884F1A4-0F26-40B3-9447-75B612F801F3}|Datos\\Datos.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\datos\\seguridad\\auditoriada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5884F1A4-0F26-40B3-9447-75B612F801F3}|Datos\\Datos.csproj|solutionrelative:datos\\seguridad\\auditoriada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\sistema-negocio-ropa\\utilidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\utilidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\principales\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\principales\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\sistema-negocio-ropa\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\principales\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\principales\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5884F1A4-0F26-40B3-9447-75B612F801F3}|Datos\\Datos.csproj|C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\datos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5884F1A4-0F26-40B3-9447-75B612F801F3}|Datos\\Datos.csproj|solutionrelative:datos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\principales\\frmnegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\principales\\frmnegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13C633C2-27AB-41FD-AFE4-E8D65FC1EF08}|Negocio\\Negocio.csproj|C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\negocio\\seguridad\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13C633C2-27AB-41FD-AFE4-E8D65FC1EF08}|Negocio\\Negocio.csproj|solutionrelative:negocio\\seguridad\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\principales\\frmreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\principales\\frmreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\principales\\frmconfirmarcontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\principales\\frmconfirmarcontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,159 +70,129 @@
       "DocumentGroups": [
         {
           "DockedWidth": 578,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Sesion.cs",
-              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Negocio\\Seguridad\\Sesion.cs",
-              "RelativeDocumentMoniker": "Negocio\\Seguridad\\Sesion.cs",
-              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Negocio\\Seguridad\\Sesion.cs",
-              "RelativeToolTip": "Negocio\\Seguridad\\Sesion.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAACcAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T22:36:56.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GrupoDA.cs",
-              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Datos\\Seguridad\\GrupoDA.cs",
-              "RelativeDocumentMoniker": "Datos\\Seguridad\\GrupoDA.cs",
-              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Datos\\Seguridad\\GrupoDA.cs",
-              "RelativeToolTip": "Datos\\Seguridad\\GrupoDA.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAiwE0AAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T22:14:23.293Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "AuditoriaDA.cs",
               "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Datos\\Seguridad\\AuditoriaDA.cs",
               "RelativeDocumentMoniker": "Datos\\Seguridad\\AuditoriaDA.cs",
               "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Datos\\Seguridad\\AuditoriaDA.cs",
               "RelativeToolTip": "Datos\\Seguridad\\AuditoriaDA.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAcwB0AAAAIAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAADwvxIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T21:10:56.146Z",
+              "WhenOpened": "2024-10-03T01:19:36.053Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\App.config",
-              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\App.config",
-              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\App.config",
-              "RelativeToolTip": "Sistema-Negocio-Ropa\\App.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-09-30T00:15:00.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "mdVerificarCorreo.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdVerificarCorreo.cs",
-              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Modal\\mdVerificarCorreo.cs",
-              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdVerificarCorreo.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Sistema-Negocio-Ropa\\Modal\\mdVerificarCorreo.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T22:12:00.873Z",
-              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "mdVerificarCorreo.cs",
-              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdVerificarCorreo.cs",
-              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Modal\\mdVerificarCorreo.cs",
-              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdVerificarCorreo.cs",
-              "RelativeToolTip": "Sistema-Negocio-Ropa\\Modal\\mdVerificarCorreo.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAkwBgAAAAhAAAA",
+              "Title": "frmMain.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmMain.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Principales\\frmMain.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmMain.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Principales\\frmMain.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T22:19:43.991Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "mdCambiarContrase\u00F1a.cs",
-              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdCambiarContrase\u00F1a.cs",
-              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Modal\\mdCambiarContrase\u00F1a.cs",
-              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdCambiarContrase\u00F1a.cs",
-              "RelativeToolTip": "Sistema-Negocio-Ropa\\Modal\\mdCambiarContrase\u00F1a.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAASwF0AAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T22:32:40.616Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T01:07:04.127Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "mdCambiarContrase\u00F1a.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdCambiarContrase\u00F1a.cs",
-              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Modal\\mdCambiarContrase\u00F1a.cs",
-              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdCambiarContrase\u00F1a.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Sistema-Negocio-Ropa\\Modal\\mdCambiarContrase\u00F1a.cs [Dise\u00F1o]",
+              "Title": "frmNegocio.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmNegocio.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Principales\\frmNegocio.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmNegocio.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Principales\\frmNegocio.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T22:29:36.037Z",
+              "WhenOpened": "2024-10-03T01:07:01.8Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmProductos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmProductos.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Principales\\frmProductos.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmProductos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Principales\\frmProductos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T01:07:00.404Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmReporte.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmReporte.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Principales\\frmReporte.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmReporte.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Principales\\frmReporte.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T01:06:59.389Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmVentas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmVentas.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Principales\\frmVentas.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmVentas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Principales\\frmVentas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T01:06:58.118Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmDashboard.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmDashboard.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Principales\\frmDashboard.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmDashboard.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Principales\\frmDashboard.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T01:05:57.565Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmConfirmarContrasena.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmConfirmarContrasena.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Principales\\frmConfirmarContrasena.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmConfirmarContrasena.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Principales\\frmConfirmarContrasena.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T00:58:42.94Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "Utilidades.cs",
-              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Utilidades.cs",
-              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Utilidades.cs",
-              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Utilidades.cs",
-              "RelativeToolTip": "Sistema-Negocio-Ropa\\Utilidades.cs",
-              "ViewState": "AQIAALoAAAAAAAAAAAAcwM8AAAAIAAAA",
+              "Title": "frmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\frmLogin.cs",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\frmLogin.cs",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAswH0AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T21:48:32.14Z",
+              "WhenOpened": "2024-10-03T00:52:59.215Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "mdRecuperarContrase\u00F1a.cs",
-              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdRecuperarContrase\u00F1a.cs",
-              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Modal\\mdRecuperarContrase\u00F1a.cs",
-              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdRecuperarContrase\u00F1a.cs",
-              "RelativeToolTip": "Sistema-Negocio-Ropa\\Modal\\mdRecuperarContrase\u00F1a.cs",
-              "ViewState": "AQIAAHYAAAAAAAAAAAAgwIUAAAAZAAAA",
+              "DocumentIndex": 14,
+              "Title": "frmLogin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\frmLogin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\frmLogin.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T21:46:21.213Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "mdRecuperarContrase\u00F1a.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdRecuperarContrase\u00F1a.cs",
-              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Modal\\mdRecuperarContrase\u00F1a.cs",
-              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdRecuperarContrase\u00F1a.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Sistema-Negocio-Ropa\\Modal\\mdRecuperarContrase\u00F1a.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T21:39:01.801Z",
+              "WhenOpened": "2024-10-03T00:58:26.983Z",
               "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Negocio\\Seguridad\\Usuario.cs",
-              "RelativeDocumentMoniker": "Negocio\\Seguridad\\Usuario.cs",
-              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Negocio\\Seguridad\\Usuario.cs",
-              "RelativeToolTip": "Negocio\\Seguridad\\Usuario.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T14:07:54.479Z"
             },
             {
               "$type": "Document",
@@ -236,46 +202,59 @@
               "RelativeDocumentMoniker": "Datos\\Seguridad\\UsuarioDA.cs",
               "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Datos\\Seguridad\\UsuarioDA.cs",
               "RelativeToolTip": "Datos\\Seguridad\\UsuarioDA.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAASwIoAAAANAAAA",
+              "ViewState": "AQIAAJUAAAAAAAAAAAAAAJgAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T13:59:47.388Z",
+              "WhenOpened": "2024-10-03T00:30:25.722Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Conexion.cs",
-              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Datos\\Conexion.cs",
-              "RelativeDocumentMoniker": "Datos\\Conexion.cs",
-              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Datos\\Conexion.cs",
-              "RelativeToolTip": "Datos\\Conexion.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T13:58:37.078Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmLogin.cs",
-              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\frmLogin.cs",
-              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\frmLogin.cs",
-              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\frmLogin.cs",
-              "RelativeToolTip": "Sistema-Negocio-Ropa\\frmLogin.cs",
-              "ViewState": "AQIAAGYAAAAAAAAAAAAcwHwAAAAMAAAA",
+              "Title": "mdUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\Seguridad\\mdUsuario.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Modal\\Seguridad\\mdUsuario.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\Seguridad\\mdUsuario.cs",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Modal\\Seguridad\\mdUsuario.cs",
+              "ViewState": "AQIAAEEBAAAAAAAAAAAAwGYBAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T13:52:56.874Z",
+              "WhenOpened": "2024-10-03T00:26:01.289Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmLogin.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\frmLogin.cs",
-              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\frmLogin.cs",
-              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\frmLogin.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Sistema-Negocio-Ropa\\frmLogin.cs [Dise\u00F1o]",
+              "DocumentIndex": 4,
+              "Title": "frmUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\Seguridad\\frmUsuario.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Principales\\Seguridad\\frmUsuario.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\Seguridad\\frmUsuario.cs",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Principales\\Seguridad\\frmUsuario.cs",
+              "ViewState": "AQIAAKsAAAAAAAAAAAAjwMYAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T13:15:56.967Z",
+              "WhenOpened": "2024-10-03T00:18:04.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "mdUsuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\Seguridad\\mdUsuario.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Modal\\Seguridad\\mdUsuario.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\Seguridad\\mdUsuario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Modal\\Seguridad\\mdUsuario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T22:22:03.954Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmUsuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\Seguridad\\frmUsuario.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Principales\\Seguridad\\frmUsuario.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\Seguridad\\frmUsuario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Principales\\Seguridad\\frmUsuario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T22:14:28.672Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

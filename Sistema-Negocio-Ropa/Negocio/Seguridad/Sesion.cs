@@ -33,6 +33,11 @@ namespace Negocio.Seguridad
             }
         }
 
+        public Usuario UsuarioEnSesion()
+        {
+            return _usuario;
+        }
+
         // Constructor privado para evitar la creación directa de la instancia
         private Sesion() { }
 

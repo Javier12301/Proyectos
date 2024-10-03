@@ -149,6 +149,7 @@
             // 
             this.txtConfirmarContrasena.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtConfirmarContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConfirmarContrasena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmarContrasena.Location = new System.Drawing.Point(21, 92);
             this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
@@ -171,6 +172,7 @@
             // 
             this.txtNuevaContrasena.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNuevaContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNuevaContrasena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNuevaContrasena.Location = new System.Drawing.Point(21, 32);
             this.txtNuevaContrasena.Name = "txtNuevaContrasena";
