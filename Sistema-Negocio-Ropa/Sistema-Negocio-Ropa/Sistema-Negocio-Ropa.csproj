@@ -144,11 +144,6 @@
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net.Http, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Net.Http.4.3.0\lib\net46\System.Net.Http.dll</HintPath>
-      <Private>True</Private>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
       <Private>True</Private>
@@ -206,11 +201,6 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Text.RegularExpressions.4.3.0\lib\net463\System.Text.RegularExpressions.dll</HintPath>
-      <Private>True</Private>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -235,11 +225,29 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modal\buscadorProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modal\buscadorProductos.Designer.cs">
+      <DependentUpon>buscadorProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modal\mdAjustarPrecioCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modal\mdAjustarPrecioCategoria.Designer.cs">
+      <DependentUpon>mdAjustarPrecioCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modal\mdAjuste.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modal\mdAjuste.Designer.cs">
       <DependentUpon>mdAjuste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modal\mdAjustePrecio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modal\mdAjustePrecio.Designer.cs">
+      <DependentUpon>mdAjustePrecio.cs</DependentUpon>
     </Compile>
     <Compile Include="Modal\mdBackup.cs">
       <SubType>Form</SubType>
@@ -253,11 +261,29 @@
     <Compile Include="Modal\mdCambiarContraseña.Designer.cs">
       <DependentUpon>mdCambiarContraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modal\mdCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modal\mdCategoria.Designer.cs">
+      <DependentUpon>mdCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modal\mdProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modal\mdProducto.Designer.cs">
+      <DependentUpon>mdProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modal\mdRecuperarContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modal\mdRecuperarContraseña.Designer.cs">
       <DependentUpon>mdRecuperarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modal\mdAjustarPrecioUnidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modal\mdAjustarPrecioUnidad.Designer.cs">
+      <DependentUpon>mdAjustarPrecioUnidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Modal\mdVerificarCorreo.cs">
       <SubType>Form</SubType>
@@ -350,8 +376,17 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modal\buscadorProductos.resx">
+      <DependentUpon>buscadorProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modal\mdAjustarPrecioCategoria.resx">
+      <DependentUpon>mdAjustarPrecioCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modal\mdAjuste.resx">
       <DependentUpon>mdAjuste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modal\mdAjustePrecio.resx">
+      <DependentUpon>mdAjustePrecio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modal\mdBackup.resx">
       <DependentUpon>mdBackup.cs</DependentUpon>
@@ -359,11 +394,23 @@
     <EmbeddedResource Include="Modal\mdCambiarContraseña.resx">
       <DependentUpon>mdCambiarContraseña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modal\mdCategoria.resx">
+      <DependentUpon>mdCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modal\mdProducto.resx">
+      <DependentUpon>mdProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modal\mdRecuperarContraseña.resx">
       <DependentUpon>mdRecuperarContraseña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modal\mdAjustarPrecioUnidad.resx">
+      <DependentUpon>mdAjustarPrecioUnidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modal\mdVerificarCorreo.resx">
       <DependentUpon>mdVerificarCorreo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modal\Seguridad\mdGrupo.resx">
+      <DependentUpon>mdGrupo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modal\Seguridad\mdUsuario.resx">
       <DependentUpon>mdUsuario.cs</DependentUpon>
@@ -409,6 +456,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -424,7 +472,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Recursos\eliminar-boton-15.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">
       <Project>{5884f1a4-0f26-40b3-9447-75b612f801f3}</Project>
@@ -437,6 +487,15 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\modificar-boton-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\checkList_Blanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\checkList_Negro.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

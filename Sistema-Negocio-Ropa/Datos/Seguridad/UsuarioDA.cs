@@ -147,6 +147,8 @@ namespace Datos.Seguridad
             return modificado;
         }
 
+        // DISEÑAR CONTROL DE REFERENCIAS
+
         // Baja de Usuario
         public bool BajaUsuario(int usuarioID)
         {
@@ -165,7 +167,7 @@ namespace Datos.Seguridad
                         oContexto.Open();
                         baja = cmd.ExecuteNonQuery() > 0;
                         if (baja)
-                            auditoriaDA.RegistrarMovimiento("Baja", Sesion.ObtenerInstancia.UsuarioEnSesion().ObtenerNombreUsuario(), "Usuario", $"Se ha dado de baja al usuario con ID: {_nombreUsuario}");
+                            auditoriaDA.RegistrarMovimiento("Baja", Sesion.ObtenerInstancia.UsuarioEnSesion().ObtenerNombreUsuario(), "Usuario", $"Se ha dado de baja al usuario: {_nombreUsuario}");
                     }
                 }
                 catch (Exception)

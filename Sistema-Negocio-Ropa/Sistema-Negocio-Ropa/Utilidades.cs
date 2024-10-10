@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
+using System.Globalization;
 
 namespace Sistema_Negocio_Ropa
 {
@@ -33,6 +34,83 @@ namespace Sistema_Negocio_Ropa
                     _instancia = new Utilidades();
                 }
                 return _instancia;
+            }
+        }
+
+        public bool VerificarTextboxPrecio(TextBoxBase textbox, ErrorProvider mensajeError)
+        {
+            if (!string.IsNullOrEmpty(textbox.Text))
+            {
+                // No está vacío
+                mensajeError.SetError(textbox, "");
+                return true;
+            }
+            else
+            {
+                // Está vacío
+                mensajeError.SetError(textbox, "Este campo no puede estar vacío.");
+                return false;
+            }
+        }
+
+        public void TextboxMoneda_KeyPress(TextBox textbox, KeyPressEventArgs e, ErrorProvider error)
+        {
+            error.SetError(textbox, "");
+            // Formato regional de Argentina
+            if (e.KeyChar == '.')
+            {
+                e.Handled = true;
+                SendKeys.Send(",");
+            }
+
+            // Solo puede haber una coma en el textbox
+            if (e.KeyChar == ',')
+            {
+                if (textbox.Text.Contains(","))
+                {
+                    error.SetError(textbox, "Solo puede haber una coma en el campo.");
+                    e.Handled = true;
+                }
+            }
+
+            // Solo permite números y control keys (como backspace)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && !(e.KeyChar == '.' || e.KeyChar == ','))
+            {
+                error.SetError(textbox, "Solo se permiten números en este campo.");
+                e.Handled = true;
+            }
+        }
+
+
+        public void TextboxMoneda_Leave(TextBox textbox, EventArgs e)
+        {
+            // Formato regional de Argentina
+            // 1.000,00
+            if (string.IsNullOrEmpty(textbox.Text))
+                textbox.Text = "0.00";
+            textbox.Text = string.Format(CultureInfo.GetCultureInfo("es-AR"), "{0:N2}", Convert.ToDecimal(textbox.Text));
+
+        }
+
+        public bool VerificarFormatoMoneda(TextBoxBase textbox, ErrorProvider mensajeError)
+        {
+            if (decimal.TryParse(textbox.Text, out decimal valor))
+            {
+                if (valor == 0.00m)  // Verifica si el valor es igual a 0.00
+                {
+                    mensajeError.SetError(textbox, "El valor ingresado debe ser mayor a 0.");
+                    return false;
+                }
+                else
+                {
+                    mensajeError.SetError(textbox, "");
+                    return true;
+                }
+            }
+            else
+            {
+                mensajeError.SetError(textbox, "El valor ingresado no cumple con el formato moneda, si desea agregar centavos, utilice el formato 0.00");
+                return false;
             }
         }
 
@@ -286,6 +364,61 @@ namespace Sistema_Negocio_Ropa
                 stringChars[i] = caracteres[random.Next(caracteres.Length)];
             }
             return new String(stringChars);
+        }
+
+        public void SoloNumero(KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        public void CargarPermisos(string nombreFormulario, FlowLayoutPanel flpContenedorBotones, Permiso permisoDeUsuario = null)
+        {
+            List<Modulo> modulosPermitidos = Sesion.ObtenerInstancia.UsuarioEnSesion().ObtenerModulosPermitidos();
+
+            Modulo modulosActivos = modulosPermitidos.FirstOrDefault(m => m.Nombre == nombreFormulario);
+
+            List<Accion> accionesPermitidas = null;
+            if (modulosActivos != null)
+            {
+                accionesPermitidas = modulosActivos.ListaAcciones;
+            }
+
+            // Buscar el módulo correspondiente al formulario actual
+            Modulo moduloActual = modulosPermitidos.FirstOrDefault(m => m.Nombre == nombreFormulario);
+
+            // Si se encuentra el módulo, cargar las opciones
+            if (moduloActual != null)
+            {
+                foreach (Control control in flpContenedorBotones.Controls)
+                {
+                    if (control is Button && control.Tag != null)
+                    {
+                        // Obtener el nombre de la acción desde el Tag del botón
+                        string nombreAccionBoton = control.Tag.ToString();
+
+                        // Verificar si el nombre de la acción está en la lista de acciones del módulo
+                        bool tienePermiso = moduloActual.ListaAcciones.Any(accion => accion.Nombre == nombreAccionBoton);
+
+                        // Activar o desactivar el botón según los permisos
+                        control.Enabled = tienePermiso;
+                        control.Visible = tienePermiso;
+                    }
+                }
+                if (permisoDeUsuario != null)
+                {
+                    permisoDeUsuario.Alta = moduloActual.ListaAcciones.Any(accion => accion.Nombre == "Alta");
+                    permisoDeUsuario.Modificar = moduloActual.ListaAcciones.Any(accion => accion.Nombre == "Modificar");
+                    permisoDeUsuario.Baja = moduloActual.ListaAcciones.Any(accion => accion.Nombre == "Baja");
+                    permisoDeUsuario.Comprar = moduloActual.ListaAcciones.Any(accion => accion.Nombre == "Comprar");
+                    permisoDeUsuario.Vender = moduloActual.ListaAcciones.Any(accion => accion.Nombre == "Vender");
+                    permisoDeUsuario.Exportar = moduloActual.ListaAcciones.Any(accion => accion.Nombre == "Exportar");
+
+                    permisoDeUsuario.Permitir_Acceso = moduloActual.ListaAcciones.Any(accion => accion.Nombre == "Permitir_Acceso");
+                }
+            }
         }
     }
 }

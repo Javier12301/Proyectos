@@ -11,5 +11,10 @@ namespace Negocio.Seguridad
         public int GrupoID { get; set; }
         public string Nombre { get; set; }
         public bool Estado { get; set; }
+
+        public string ObtenerNombre()
+        {
+            return Nombre;
+        }
     }
 }

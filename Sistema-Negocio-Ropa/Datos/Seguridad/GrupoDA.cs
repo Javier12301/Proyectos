@@ -1,4 +1,5 @@
-﻿using Negocio.Seguridad;
+﻿using Negocio.Negocio;
+using Negocio.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -54,6 +55,250 @@ namespace Datos.Seguridad
                 }
             }
             return listaModulos;
+        }
+
+        // VERIFICAR SI GRUPO TIENE USUARIOS
+        public bool GrupoTieneUsuarios(int grupoID)
+        {
+            if(grupoID > 0)
+            {
+                bool tieneUsuarios = false;
+                using(SqlConnection oContexto = conexion.EstablecerConexion())
+                {
+                    try
+                    {
+                        StringBuilder query = new StringBuilder();
+                        query.AppendLine("SELECT COUNT(U.UsuarioID) AS Cantidad");
+                        query.AppendLine("FROM Grupo G");
+                        query.AppendLine("LEFT JOIN Usuario U ON G.GrupoID = U.GrupoID");
+                        query.AppendLine("WHERE G.GrupoID = @grupoID");
+                        using (SqlCommand cmd = new SqlCommand(query.ToString(), oContexto))
+                        {
+                            cmd.Parameters.AddWithValue("@grupoID", grupoID);
+                            oContexto.Open();
+                            int count = Convert.ToInt32(cmd.ExecuteScalar());
+                            tieneUsuarios = count > 0;
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        throw new Exception("Error al comprobar si el grupo tiene usuarios, contactar con el administrador del sistema.");
+                    }
+                }
+                return tieneUsuarios;
+            }
+            else
+            {
+                throw new Exception("Ocurrió un error al intentar verificar si el grupo tiene usuarios, contacte con el administrador del sistema si este error persiste.");
+            }
+        }
+
+        // Alta Grupo
+        AuditoriaDA auditoriaDA = new AuditoriaDA();
+        public bool AltaGrupo(Grupo oGrupo)
+        {
+            bool alta = false;
+            using(SqlConnection oContexto = conexion.EstablecerConexion())
+            {
+                StringBuilder query = new StringBuilder();
+                query.AppendLine("INSERT INTO Grupo (Nombre, Estado) VALUES (@Nombre, @Estado)");
+                try
+                {
+                    using(SqlCommand cmd = new SqlCommand(query.ToString(), oContexto))
+                    {
+                        cmd.Parameters.AddWithValue("@Nombre", oGrupo.Nombre);
+                        cmd.Parameters.AddWithValue("@Estado", oGrupo.Estado);
+                        oContexto.Open();
+                        alta = cmd.ExecuteNonQuery() > 0;
+                        if (alta)
+                            auditoriaDA.RegistrarMovimiento("Alta", Sesion.ObtenerInstancia.UsuarioEnSesion().ObtenerNombreUsuario(), "Grupo", $"Se ha dado de alta un nuevo grupo: {oGrupo.Nombre}.");
+                    }
+
+                }
+                catch (Exception)
+                {
+                    throw new Exception("Se ha producido un error al intentar dar de alta el grupo, contactar con el administrador del sistema.");
+                }
+            }
+            return alta;
+        }
+
+        // Modificar Grupo
+        public bool ModificarGrupo(Grupo oGrupo)
+        {
+            bool modificado = false;
+            using (SqlConnection oContexto = conexion.EstablecerConexion())
+            {
+                StringBuilder query = new StringBuilder();
+                query.AppendLine("UPDATE Grupo SET Nombre = @Nombre, Estado = @Estado WHERE GrupoID = @GrupoID");
+                try
+                {
+                    using (SqlCommand cmd = new SqlCommand(query.ToString(), oContexto))
+                    {
+                        cmd.Parameters.AddWithValue("@Nombre", oGrupo.Nombre);
+                        cmd.Parameters.AddWithValue("@Estado", oGrupo.Estado);
+                        cmd.Parameters.AddWithValue("@GrupoID", oGrupo.GrupoID);
+                        oContexto.Open();
+                        modificado = cmd.ExecuteNonQuery() > 0;
+                        if (modificado)
+                            auditoriaDA.RegistrarMovimiento("Modificación", Sesion.ObtenerInstancia.UsuarioEnSesion().ObtenerNombreUsuario(), "Grupo", $"Se ha modificado al grupo {oGrupo.Nombre}");
+                    }
+
+                }
+                catch (Exception)
+                {
+                    throw new Exception("Se ha producido un error al intentar modificar el grupo, contactar con el administrador del sistema.");
+                }
+            }
+            return modificado;
+        }
+
+        UsuarioDA UsuarioDA = new UsuarioDA();
+        // Baja Grupo
+        public bool BajaGrupo(Operacion operacion)
+        {
+            
+            bool resultado = true;
+            switch (operacion.NombreOperacion)
+            {
+                case "EliminarGrupo":
+                    return EliminarGrupo(operacion);
+                case "AsignarUsuariosSinGrupo":
+                    resultado &= AsignarUsuarioSinGrupo(operacion);
+                    resultado &= EliminarGrupo(operacion);
+                    return resultado;
+                case "EliminarGrupoYUsuarios":
+                    List<int> listaUsuarioID = ListarUsuariosIDEnGrupoD(operacion.ID);
+                    foreach (var usuarioID in listaUsuarioID)
+                    {
+                        resultado &= UsuarioDA.BajaUsuario(usuarioID);
+                    }
+                    resultado &= EliminarGrupo(operacion);
+                    return resultado;
+
+                default:
+                    throw new Exception("Ocurrió un error al intentar eliminar el grupo, contacte con el administrador del sistema si este error persiste.");
+            }
+        }
+
+        public List<int> ListarUsuariosIDEnGrupoD(int grupoID)
+        {
+            List<int> listaUsuarioID = new List<int>();
+            using(SqlConnection oContexto = conexion.EstablecerConexion())
+            {
+                StringBuilder query = new StringBuilder();
+                query.AppendLine("SELECT UsuarioID FROM Usuario");
+                query.AppendLine("WHERE GrupoID = @GrupoID");
+                try
+                {
+                    using(SqlCommand cmd = new SqlCommand(query.ToString(), oContexto))
+                    {
+                        cmd.Parameters.AddWithValue("@GrupoID", grupoID);
+                        oContexto.Open();
+                        using(SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            int usuarioID;
+                            while (reader.Read())
+                            {
+                                usuarioID = Convert.ToInt32(reader["UsuarioID"]);
+                                listaUsuarioID.Add(usuarioID);
+                            }
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    throw new Exception("Se ha producido un error al intentar obtener los usuarios del grupo, contactar con el administrador del sistema.");
+                }
+            }
+            return listaUsuarioID;
+        }
+
+        private bool AsignarUsuarioSinGrupo(Operacion operacion)
+        {
+            bool resultado = true;
+            List<int> listaUsuarioID = ListarUsuariosIDEnGrupoD(operacion.ID);
+            foreach (var usuarioID in listaUsuarioID)
+            {
+                resultado &= AsignarUsuarioSinGrupoBD(usuarioID);
+            }
+            return resultado;
+        }
+
+        private bool AsignarUsuarioSinGrupoBD(int usuarioID)
+        {
+            bool asignado = false;
+            using(var oContexto = conexion.EstablecerConexion())
+            {
+                StringBuilder query = new StringBuilder();
+                query.AppendLine("UPDATE Usuario SET GrupoID = 0");
+                query.AppendLine("WHERE UsuarioID = @UsuarioID");
+                try
+                {
+                    using(SqlCommand cmd = new SqlCommand(query.ToString(), oContexto))
+                    {
+                        cmd.Parameters.AddWithValue("@UsuarioID", usuarioID);
+                        oContexto.Open();
+                        asignado = cmd.ExecuteNonQuery() > 0;
+                    }
+                }
+                catch (Exception)
+                {
+                    throw new Exception("Se ha producido un error al intentar asignar el usuario a un grupo, contactar con el administrador del sistema.");
+                }
+            }
+            return asignado;
+        }
+
+        PermisoDA PermisoDA = new PermisoDA();
+        private bool EliminarGrupo(Operacion operacion)
+        {
+            int grupoID = operacion.ID;
+
+            // Comprobar si el grupo tiene permisos asignados
+            bool tienePermisos = PermisoDA.GrupoTienePermisosBD(grupoID);
+
+            if (tienePermisos)
+            {
+                // Desactivar permisos antes de eliminar el grupo
+                if(grupoID > 0)
+                {
+                    PermisoDA.DesactivarPermisos(grupoID);
+                }
+            }
+
+            // Realizar la eliminación del grupo
+            bool eliminacionExitosa = BajaGrupoBD(grupoID);
+
+            return eliminacionExitosa;
+        }
+
+
+        public bool BajaGrupoBD(int grupoID)
+        {
+            bool baja = false;
+            using(var oContexto = conexion.EstablecerConexion())
+            {
+                StringBuilder query = new StringBuilder();
+                query.AppendLine("DELETE FROM Grupo WHERE GrupoID = @GrupoID");
+                try
+                {
+                    using(SqlCommand cmd = new SqlCommand(query.ToString(), oContexto))
+                    {
+                        string _nombreGrupo = ObtenerGrupoPorID(grupoID).Nombre;
+                        cmd.Parameters.AddWithValue("@GrupoID", grupoID);
+                        oContexto.Open();
+                        baja = cmd.ExecuteNonQuery() > 0;
+                        if (baja)
+                            auditoriaDA.RegistrarMovimiento("Baja", Sesion.ObtenerInstancia.UsuarioEnSesion().ObtenerNombreUsuario(), "Grupo", $"Se ha dado de baja al grupo: {_nombreGrupo}");
+                    }
+                }
+                catch (Exception)
+                {
+                    throw new Exception("Se ha producido un error al intentar dar de baja el grupo, contactar con el administrador del sistema.");
+                }
+            }
+            return baja;
         }
 
         // Obtener grupo por Nombre
@@ -197,6 +442,65 @@ namespace Datos.Seguridad
             }
             return listaAcciones;
         }
+
+        public DataTable ObtenerGrupoFiltrados(string filtroBuscar, string buscar, string filtroEstado)
+        {       
+            filtroBuscar = string.IsNullOrWhiteSpace(filtroBuscar) ? "Todos" : filtroBuscar;
+            filtroEstado = string.IsNullOrWhiteSpace(filtroEstado) ? "Todos" : filtroEstado;
+
+            DataTable dt = new DataTable();
+            using (SqlConnection oContexto = conexion.EstablecerConexion())
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_ObtenerGruposConFiltros", oContexto))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    // parámetros
+                    cmd.Parameters.AddWithValue("@FiltroBuscar", filtroBuscar);
+                    cmd.Parameters.AddWithValue("@Buscar", string.IsNullOrEmpty(buscar) ? "" : buscar);
+                    cmd.Parameters.AddWithValue("@FiltroEstado", filtroEstado);
+
+                    try
+                    {
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        da.Fill(dt);
+                    }
+                    catch (Exception)
+                    {
+                        // Si ocurre una excepción, lo ideal sería lanzar un error, pero para que no se rompa la tabla, enviar datos vacíos
+                        throw new Exception("Ocurrió un error al cargar la grilla de grupos, contactar con el administrador del sistema.");
+                    }
+                }
+            }
+            return dt;
+        }
+
+        // existe grupo
+        public bool ExisteGrupo(string nombreGrupo)
+        {
+            bool existe = false;
+            using(SqlConnection oContexto = conexion.EstablecerConexion())
+            {
+                StringBuilder query = new StringBuilder();
+                query.AppendLine("SELECT COUNT(*) FROM Grupo WHERE Nombre COLLATE SQL_Latin1_General_CP1_CS_AS = @nombreGrupo");
+                try
+                {
+                    using(SqlCommand cmd = new SqlCommand(query.ToString(), oContexto))
+                    {
+                        cmd.Parameters.AddWithValue("@nombreGrupo", nombreGrupo);
+                        oContexto.Open();
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        existe = count > 0;
+                    }
+                }
+                catch (Exception)
+                {
+                    throw new Exception("Error al verificar si existe el grupo, contactar con el administrador del sistema.");
+                }
+            }
+            return existe;
+        }
+
 
     }
 }

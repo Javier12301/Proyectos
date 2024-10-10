@@ -61,3 +61,10 @@ C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Sistema-Negocio-Ropa\bin\Debug\Sys
 C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Sistema-Negocio-Ropa\bin\Debug\System.Memory.xml
 C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Sistema-Negocio-Ropa\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Sistema-Negocio-Ropa\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Sistema-Negocio-Ropa\obj\Debug\Sistema_Negocio_Ropa.Modal.Seguridad.mdGrupo.resources
+C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Sistema-Negocio-Ropa\obj\Debug\Sistema_Negocio_Ropa.Modal.mdCategoria.resources
+C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Sistema-Negocio-Ropa\obj\Debug\Sistema_Negocio_Ropa.Modal.mdProducto.resources
+C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Sistema-Negocio-Ropa\obj\Debug\Sistema_Negocio_Ropa.Modal.buscadorProductos.resources
+C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Sistema-Negocio-Ropa\obj\Debug\Sistema_Negocio_Ropa.Modal.mdAjustePrecio.resources
+C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Sistema-Negocio-Ropa\obj\Debug\Sistema_Negocio_Ropa.Modal.mdAjustarPrecioUnidad.resources
+C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Sistema-Negocio-Ropa\obj\Debug\Sistema_Negocio_Ropa.Modal.mdAjustarPrecioCategoria.resources

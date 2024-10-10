@@ -18,6 +18,8 @@ namespace Negocio.Seguridad
         public bool Alta { get; set; }
         public bool Modificar { get; set; }
         public bool Baja { get; set; }
+        public bool Importar { get; set; }
+        public bool Exportar { get; set; }
         public bool Vender { get; set; }
         public bool Comprar { get; set; }
         public bool Permitir_Acceso { get; set; }

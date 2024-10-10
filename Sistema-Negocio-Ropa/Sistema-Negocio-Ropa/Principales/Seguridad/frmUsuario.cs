@@ -22,6 +22,8 @@ namespace Sistema_Negocio_Ropa.Principales.Seguridad
         private Utilidades uiUtilidades = Utilidades.ObtenerInstancia;
         private Sesion lSesion = Sesion.ObtenerInstancia;
 
+        private Permiso _permisousuario;
+
         public frmUsuario()
         {
             InitializeComponent();
@@ -35,11 +37,20 @@ namespace Sistema_Negocio_Ropa.Principales.Seguridad
             {
                 cargarLista();
                 cargarFiltros();
+                CargarPermisos();
 
             }catch(Exception ex)
             {
                 MessageBox.Show("Ocurrió un error al cargar la ventana de usuario: " + ex.Message, "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void CargarPermisos()
+        {
+            _permisousuario = new Permiso();
+            uiUtilidades.CargarPermisos("formUsuarios", flpContenedorBotones, _permisousuario);
+            btnExportarP.Enabled = true;
+            btnExportarP.Visible = true;
         }
 
         private void btnNuevoP_Click(object sender, EventArgs e)
@@ -71,46 +82,54 @@ namespace Sistema_Negocio_Ropa.Principales.Seguridad
 
         private void AbrirModalModificar()
         {
-            try
+            if (_permisousuario.Modificar)
             {
-                if(dgvUsuario.CurrentCell != null)
+                try
                 {
-                    int filaIndex = dgvUsuario.CurrentCell.RowIndex;
-                    int usuarioID = Convert.ToInt32(dgvUsuario.Rows[filaIndex].Cells["ID"].Value);
-                    if (usuarioID > 0)
+                    if (dgvUsuario.CurrentCell != null)
                     {
-
-                        // No se puede modificar su propio usuario en esta ventana, utilices el módulo de Mis Datos.
-                        if (usuarioID == lSesion.UsuarioEnSesion().UsuarioID)
+                        int filaIndex = dgvUsuario.CurrentCell.RowIndex;
+                        int usuarioID = Convert.ToInt32(dgvUsuario.Rows[filaIndex].Cells["ID"].Value);
+                        if (usuarioID > 0)
                         {
-                            MessageBox.Show("No puede modificar su propio usuario en esta ventana, utilice el módulo de \"Mis datos\".", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return;
-                        }
 
-                        if (usuarioID == 1)
-                        {
-                            MessageBox.Show("No puede modificar el usuario Admin.", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return;
-                        }
-
-                        using (var modal = new mdUsuario(true, usuarioID))
-                        {
-                            var resultado = modal.ShowDialog();
-                            if (resultado == DialogResult.OK)
+                            // No se puede modificar su propio usuario en esta ventana, utilices el módulo de Mis Datos.
+                            if (usuarioID == lSesion.UsuarioEnSesion().UsuarioID)
                             {
-                                cargarLista();
+                                MessageBox.Show("No puede modificar su propio usuario en esta ventana, utilice el módulo de \"Mis datos\".", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+
+                            if (usuarioID == 1)
+                            {
+                                MessageBox.Show("No puede modificar el usuario Admin.", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+
+                            using (var modal = new mdUsuario(true, usuarioID))
+                            {
+                                var resultado = modal.ShowDialog();
+                                if (resultado == DialogResult.OK)
+                                {
+                                    cargarLista();
+                                }
                             }
                         }
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Seleccione un usuario para modificar.", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                    else
+                    {
+                        MessageBox.Show("Seleccione un usuario para modificar.", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
 
-            }catch(Exception ex)
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
             {
-                MessageBox.Show(ex.Message, "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No tiene permisos para modificar usuarios.", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -129,8 +148,10 @@ namespace Sistema_Negocio_Ropa.Principales.Seguridad
 
         private void bajaUsuario()
         {
-            try
-            {    
+            if (_permisousuario.Baja)
+            {
+                try
+                {
                     // Verificar si hay celdas seleccionadas
                     if (dgvUsuario.SelectedCells.Count == 0)
                     {
@@ -184,11 +205,16 @@ namespace Sistema_Negocio_Ropa.Principales.Seguridad
                     {
                         MessageBox.Show(usuariosEliminados > 1 ? "Usuarios eliminados correctamente." : "Usuario eliminado correctamente.", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         cargarLista();
-                    }             
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No tiene permisos para eliminar usuarios.", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -220,15 +246,26 @@ namespace Sistema_Negocio_Ropa.Principales.Seguridad
         }
 
 
+        private BindingSource bindingSource = new BindingSource();
+        private DataTable dt = new DataTable(); // Reutilizar instancia de DataTable
+
         private void cargarLista()
         {
-            DataTable dt = new DataTable();
             try
-            {           
-                dt = usuarioDA.ObtenerUsuarioFiltrados(cmbFiltroBuscar.Text, txtBuscar.Text, cmbFiltroGrupo.Text, cmbFiltroEstado.Text);
+            {
+                dt.Clear();  // Limpiar el DataTable existente
+
+                dt = usuarioDA.ObtenerUsuarioFiltrados(
+                    cmbFiltroBuscar.Text,
+                    txtBuscar.Text,
+                    cmbFiltroGrupo.Text,
+                    cmbFiltroEstado.Text
+                );
 
                 // Asigna la fuente de datos
-                dgvUsuario.DataSource = dt;
+                bindingSource.DataSource = dt;
+                dgvUsuario.DataSource = bindingSource;
+                bNavegadorUsuario.BindingSource = bindingSource;
 
                 // Verificar si el DataTable está vacío
                 if (dt.Rows.Count == 0)

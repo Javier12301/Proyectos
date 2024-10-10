@@ -37,10 +37,9 @@ namespace Sistema_Negocio_Ropa.Modal
             btnPerfiles.Enabled = activarBtnPerfiles;
             bool activarBtnBackup = modulosPermitidos.Any(m => m.Nombre == "formBackup");
             btnBaseDatos.Enabled = activarBtnBackup;
-            bool activarBtnMisDatos = modulosPermitidos.Any(m => m.Nombre == "formMisDatos");
-            btnMisDatos.Enabled = activarBtnMisDatos;
             bool activarBtnNegocio = modulosPermitidos.Any(m => m.Nombre == "formNegocio");
             btnNegocio.Enabled = activarBtnNegocio;
+            btnMisDatos.Enabled = true;
         }
 
         private void btnPerfiles_Click(object sender, EventArgs e)

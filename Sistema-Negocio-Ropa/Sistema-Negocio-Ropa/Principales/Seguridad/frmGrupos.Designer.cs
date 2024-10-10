@@ -39,7 +39,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblEstado = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bnGrupo = new System.Windows.Forms.BindingNavigator(this.components);
             this.bnpCantidadDeItems = new System.Windows.Forms.ToolStripLabel();
             this.bnpUltimoItem = new System.Windows.Forms.ToolStripButton();
             this.bnpSiguienteItem = new System.Windows.Forms.ToolStripButton();
@@ -68,8 +68,8 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bnGrupo)).BeginInit();
+            this.bnGrupo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).BeginInit();
             this.panel4.SuspendLayout();
             this.flpContenedorBotones.SuspendLayout();
@@ -78,7 +78,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.bindingNavigator1);
+            this.panel1.Controls.Add(this.bnGrupo);
             this.panel1.Controls.Add(this.dgvGrupos);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.flpContenedorBotones);
@@ -137,18 +137,18 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Estado";
             // 
-            // bindingNavigator1
+            // bnGrupo
             // 
-            this.bindingNavigator1.AddNewItem = null;
-            this.bindingNavigator1.AutoSize = false;
-            this.bindingNavigator1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bindingNavigator1.CountItem = this.bnpCantidadDeItems;
-            this.bindingNavigator1.DeleteItem = null;
-            this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigator1.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bindingNavigator1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bnGrupo.AddNewItem = null;
+            this.bnGrupo.AutoSize = false;
+            this.bnGrupo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bnGrupo.CountItem = this.bnpCantidadDeItems;
+            this.bnGrupo.DeleteItem = null;
+            this.bnGrupo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bnGrupo.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bnGrupo.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.bnGrupo.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.bnGrupo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bnpUltimoItem,
             this.bnpSiguienteItem,
             this.bindingNavigatorSeparator,
@@ -161,18 +161,18 @@
             this.cmbFiltroEstado,
             this.toolStripLabel2,
             this.toolStripSeparator3});
-            this.bindingNavigator1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 311);
-            this.bindingNavigator1.MoveFirstItem = this.bnpPrimerItem;
-            this.bindingNavigator1.MoveLastItem = this.bnpUltimoItem;
-            this.bindingNavigator1.MoveNextItem = this.bnpSiguienteItem;
-            this.bindingNavigator1.MovePreviousItem = this.bnpItemAnterior;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = this.bnpNumeroItem;
-            this.bindingNavigator1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1081, 49);
-            this.bindingNavigator1.TabIndex = 112;
-            this.bindingNavigator1.Text = "bindingNavigator1";
+            this.bnGrupo.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.bnGrupo.Location = new System.Drawing.Point(0, 311);
+            this.bnGrupo.MoveFirstItem = this.bnpPrimerItem;
+            this.bnGrupo.MoveLastItem = this.bnpUltimoItem;
+            this.bnGrupo.MoveNextItem = this.bnpSiguienteItem;
+            this.bnGrupo.MovePreviousItem = this.bnpItemAnterior;
+            this.bnGrupo.Name = "bnGrupo";
+            this.bnGrupo.PositionItem = this.bnpNumeroItem;
+            this.bnGrupo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bnGrupo.Size = new System.Drawing.Size(1081, 49);
+            this.bnGrupo.TabIndex = 112;
+            this.bnGrupo.Text = "bindingNavigator1";
             // 
             // bnpCantidadDeItems
             // 
@@ -258,6 +258,7 @@
             this.cmbFiltroEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.cmbFiltroEstado.Name = "cmbFiltroEstado";
             this.cmbFiltroEstado.Size = new System.Drawing.Size(160, 49);
+            this.cmbFiltroEstado.SelectedIndexChanged += new System.EventHandler(this.cmbFiltroEstado_SelectedIndexChanged);
             // 
             // toolStripLabel2
             // 
@@ -318,6 +319,8 @@
             this.dgvGrupos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvGrupos.Size = new System.Drawing.Size(1071, 169);
             this.dgvGrupos.TabIndex = 111;
+            this.dgvGrupos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrupos_CellDoubleClick);
+            this.dgvGrupos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvGrupos_KeyDown);
             // 
             // panel4
             // 
@@ -354,6 +357,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(29, 23);
             this.btnBuscar.TabIndex = 96;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnLimpiar
             // 
@@ -374,6 +378,7 @@
             this.btnLimpiar.TabIndex = 97;
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // txtBuscar
             // 
@@ -383,6 +388,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(188, 22);
             this.txtBuscar.TabIndex = 3;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // cmbFiltroBuscar
             // 
@@ -394,6 +400,7 @@
             this.cmbFiltroBuscar.Name = "cmbFiltroBuscar";
             this.cmbFiltroBuscar.Size = new System.Drawing.Size(113, 24);
             this.cmbFiltroBuscar.TabIndex = 2;
+            this.cmbFiltroBuscar.SelectedIndexChanged += new System.EventHandler(this.cmbFiltroBuscar_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -450,6 +457,7 @@
             this.btnNuevoP.Text = "Nuevo";
             this.btnNuevoP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNuevoP.UseVisualStyleBackColor = false;
+            this.btnNuevoP.Click += new System.EventHandler(this.btnNuevoP_Click);
             // 
             // btnModificarP
             // 
@@ -469,6 +477,7 @@
             this.btnModificarP.Text = "Modificar";
             this.btnModificarP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnModificarP.UseVisualStyleBackColor = false;
+            this.btnModificarP.Click += new System.EventHandler(this.btnModificarP_Click);
             // 
             // btnEliminarP
             // 
@@ -488,6 +497,7 @@
             this.btnEliminarP.Text = "Eliminar";
             this.btnEliminarP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminarP.UseVisualStyleBackColor = false;
+            this.btnEliminarP.Click += new System.EventHandler(this.btnEliminarP_Click);
             // 
             // btnExportarP
             // 
@@ -507,6 +517,7 @@
             this.btnExportarP.Text = "Exportar";
             this.btnExportarP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExportarP.UseVisualStyleBackColor = false;
+            this.btnExportarP.Click += new System.EventHandler(this.btnExportarP_Click);
             // 
             // frmGrupos
             // 
@@ -517,13 +528,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGrupos";
             this.Text = "frmGrupos";
+            this.Load += new System.EventHandler(this.frmGrupos_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.bindingNavigator1.ResumeLayout(false);
-            this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bnGrupo)).EndInit();
+            this.bnGrupo.ResumeLayout(false);
+            this.bnGrupo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -539,7 +551,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.BindingNavigator bnGrupo;
         private System.Windows.Forms.ToolStripLabel bnpCantidadDeItems;
         private System.Windows.Forms.ToolStripButton bnpUltimoItem;
         private System.Windows.Forms.ToolStripButton bnpSiguienteItem;

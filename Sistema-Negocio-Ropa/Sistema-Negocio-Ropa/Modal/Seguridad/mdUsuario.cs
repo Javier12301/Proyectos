@@ -437,7 +437,11 @@ namespace Sistema_Negocio_Ropa.Modal.Seguridad
             }
         }
 
-
-
+        private void cmbGrupo_KeyPress(object sender, KeyPressEventArgs e)
+        {           
+            ComboBox combobox = (ComboBox)sender;
+            uiUtilidades.Combobox_ShortcutSiguienteIndex(combobox, e);
+            
+        }
     }
 }

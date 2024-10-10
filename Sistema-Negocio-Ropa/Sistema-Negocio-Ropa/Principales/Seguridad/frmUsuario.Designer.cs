@@ -35,7 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bNavegadorUsuario = new System.Windows.Forms.BindingNavigator(this.components);
             this.bnpCantidadDeItems = new System.Windows.Forms.ToolStripLabel();
             this.bnpUltimoItem = new System.Windows.Forms.ToolStripButton();
             this.bnpSiguienteItem = new System.Windows.Forms.ToolStripButton();
@@ -68,8 +68,8 @@
             this.btnEliminarP = new System.Windows.Forms.Button();
             this.btnExportarP = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bNavegadorUsuario)).BeginInit();
+            this.bNavegadorUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,7 +79,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.bindingNavigator1);
+            this.panel1.Controls.Add(this.bNavegadorUsuario);
             this.panel1.Controls.Add(this.dgvUsuario);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel2);
@@ -90,18 +90,18 @@
             this.panel1.Size = new System.Drawing.Size(1081, 360);
             this.panel1.TabIndex = 1;
             // 
-            // bindingNavigator1
+            // bNavegadorUsuario
             // 
-            this.bindingNavigator1.AddNewItem = null;
-            this.bindingNavigator1.AutoSize = false;
-            this.bindingNavigator1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bindingNavigator1.CountItem = this.bnpCantidadDeItems;
-            this.bindingNavigator1.DeleteItem = null;
-            this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigator1.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bindingNavigator1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bNavegadorUsuario.AddNewItem = null;
+            this.bNavegadorUsuario.AutoSize = false;
+            this.bNavegadorUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bNavegadorUsuario.CountItem = this.bnpCantidadDeItems;
+            this.bNavegadorUsuario.DeleteItem = null;
+            this.bNavegadorUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bNavegadorUsuario.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bNavegadorUsuario.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.bNavegadorUsuario.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.bNavegadorUsuario.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bnpUltimoItem,
             this.bnpSiguienteItem,
             this.bindingNavigatorSeparator,
@@ -116,18 +116,18 @@
             this.toolStripSeparator3,
             this.toolStripLabel1,
             this.cmbFiltroGrupo});
-            this.bindingNavigator1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 311);
-            this.bindingNavigator1.MoveFirstItem = this.bnpPrimerItem;
-            this.bindingNavigator1.MoveLastItem = this.bnpUltimoItem;
-            this.bindingNavigator1.MoveNextItem = this.bnpSiguienteItem;
-            this.bindingNavigator1.MovePreviousItem = this.bnpItemAnterior;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = this.bnpNumeroItem;
-            this.bindingNavigator1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1081, 49);
-            this.bindingNavigator1.TabIndex = 112;
-            this.bindingNavigator1.Text = "bindingNavigator1";
+            this.bNavegadorUsuario.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.bNavegadorUsuario.Location = new System.Drawing.Point(0, 311);
+            this.bNavegadorUsuario.MoveFirstItem = this.bnpPrimerItem;
+            this.bNavegadorUsuario.MoveLastItem = this.bnpUltimoItem;
+            this.bNavegadorUsuario.MoveNextItem = this.bnpSiguienteItem;
+            this.bNavegadorUsuario.MovePreviousItem = this.bnpItemAnterior;
+            this.bNavegadorUsuario.Name = "bNavegadorUsuario";
+            this.bNavegadorUsuario.PositionItem = this.bnpNumeroItem;
+            this.bNavegadorUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bNavegadorUsuario.Size = new System.Drawing.Size(1081, 49);
+            this.bNavegadorUsuario.TabIndex = 112;
+            this.bNavegadorUsuario.Text = "bindingNavigator1";
             // 
             // bnpCantidadDeItems
             // 
@@ -550,9 +550,9 @@
             this.Text = "frmUsuario";
             this.Load += new System.EventHandler(this.frmUsuario_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.bindingNavigator1.ResumeLayout(false);
-            this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bNavegadorUsuario)).EndInit();
+            this.bNavegadorUsuario.ResumeLayout(false);
+            this.bNavegadorUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -567,7 +567,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.BindingNavigator bNavegadorUsuario;
         private System.Windows.Forms.ToolStripLabel bnpCantidadDeItems;
         private System.Windows.Forms.ToolStripButton bnpUltimoItem;
         private System.Windows.Forms.ToolStripButton bnpSiguienteItem;

@@ -196,7 +196,7 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(5, 9);
+            this.lblUsuario.Location = new System.Drawing.Point(5, 5);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(140, 15);
             this.lblUsuario.TabIndex = 0;
@@ -221,7 +221,7 @@
             // lblEmail
             // 
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(5, 3);
+            this.lblEmail.Location = new System.Drawing.Point(5, 5);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(161, 17);
             this.lblEmail.TabIndex = 0;
@@ -247,7 +247,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(5, 9);
+            this.lblNombre.Location = new System.Drawing.Point(5, 5);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(68, 15);
             this.lblNombre.TabIndex = 0;
@@ -273,7 +273,7 @@
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(5, 9);
+            this.lblApellido.Location = new System.Drawing.Point(5, 5);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(69, 15);
             this.lblApellido.TabIndex = 0;
@@ -296,12 +296,13 @@
             this.cmbGrupo.Name = "cmbGrupo";
             this.cmbGrupo.Size = new System.Drawing.Size(379, 23);
             this.cmbGrupo.TabIndex = 11;
+            this.cmbGrupo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbGrupo_KeyPress);
             // 
             // lblGrupo
             // 
             this.lblGrupo.AutoSize = true;
             this.lblGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrupo.Location = new System.Drawing.Point(5, 9);
+            this.lblGrupo.Location = new System.Drawing.Point(5, 5);
             this.lblGrupo.Name = "lblGrupo";
             this.lblGrupo.Size = new System.Drawing.Size(136, 15);
             this.lblGrupo.TabIndex = 0;
@@ -347,7 +348,7 @@
             // 
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseña.Location = new System.Drawing.Point(5, 9);
+            this.lblContraseña.Location = new System.Drawing.Point(5, 5);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(90, 15);
             this.lblContraseña.TabIndex = 0;
@@ -393,7 +394,7 @@
             // 
             this.lblContraseñaConfirmar.AutoSize = true;
             this.lblContraseñaConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseñaConfirmar.Location = new System.Drawing.Point(5, 9);
+            this.lblContraseñaConfirmar.Location = new System.Drawing.Point(5, 5);
             this.lblContraseñaConfirmar.Name = "lblContraseñaConfirmar";
             this.lblContraseñaConfirmar.Size = new System.Drawing.Size(141, 15);
             this.lblContraseñaConfirmar.TabIndex = 0;

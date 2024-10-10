@@ -197,7 +197,7 @@
             this.txtContraseñaG.PasswordChar = '*';
             this.txtContraseñaG.Size = new System.Drawing.Size(225, 29);
             this.txtContraseñaG.TabIndex = 2;
-            this.txtContraseñaG.Text = "Osonegro12301";
+            this.txtContraseñaG.Text = "Reloj12301";
             this.txtContraseñaG.Enter += new System.EventHandler(this.txtCredenciales_Enter);
             this.txtContraseñaG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCredenciales_KeyPress);
             // 
