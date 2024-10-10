@@ -176,7 +176,6 @@ namespace Sistema_Negocio_Ropa.Principales
                 permisosDeUsuario.Alta = moduloActual.ListaAcciones.Any(accion => accion.Nombre == "Alta");
                 permisosDeUsuario.Modificar = moduloActual.ListaAcciones.Any(accion => accion.Nombre== "Modificar");
                 permisosDeUsuario.Baja = moduloActual.ListaAcciones.Any(accion => accion.Nombre == "Baja");
-                permisosDeUsuario.Importar = moduloActual.ListaAcciones.Any(accion => accion.Nombre == "Importar");
                 permisosDeUsuario.Exportar = moduloActual.ListaAcciones.Any(accion => accion.Nombre == "Exportar");
             }
 
@@ -518,11 +517,6 @@ namespace Sistema_Negocio_Ropa.Principales
         }
 
 
-        private void btnImportarP_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnExportarP_Click(object sender, EventArgs e)
         {
             if (permisosDeUsuario.Exportar)
@@ -534,7 +528,6 @@ namespace Sistema_Negocio_Ropa.Principales
                 MessageBox.Show("No tiene permisos para realizar esta acción.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
 
 
         private void btnAjustarPrecio_Click(object sender, EventArgs e)

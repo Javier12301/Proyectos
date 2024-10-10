@@ -53,6 +53,12 @@ namespace Sistema_Negocio_Ropa
             }
         }
 
+        public string FormatearMonedaString(decimal valor)
+        {
+            return string.Format(CultureInfo.GetCultureInfo("es-AR"), "{0:N2}", valor);
+        }     
+
+
         public void TextboxMoneda_KeyPress(TextBox textbox, KeyPressEventArgs e, ErrorProvider error)
         {
             error.SetError(textbox, "");

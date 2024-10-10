@@ -44,9 +44,9 @@ VALUES
     ('Alta', (SELECT ModuloID FROM Modulo WHERE Nombre = 'formProductos')),
     ('Modificar', (SELECT ModuloID FROM Modulo WHERE Nombre = 'formProductos')),
     ('Baja', (SELECT ModuloID FROM Modulo WHERE Nombre = 'formProductos')),
-	('Importar', (SELECT ModuloID FROM Modulo WHERE Nombre = 'formProductos')),
 	('Exportar', (SELECT ModuloID FROM Modulo WHERE Nombre = 'formProductos'));
 GO
+
 
 
 

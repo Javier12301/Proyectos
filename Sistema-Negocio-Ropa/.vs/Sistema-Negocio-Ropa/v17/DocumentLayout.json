@@ -3,24 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\principales\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\principales\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\modal\\inventario\\mdentradasinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\modal\\inventario\\mdentradasinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\modal\\inventario\\mdentradasinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\modal\\inventario\\mdentradasinventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\utilidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\utilidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\principales\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\principales\\frmproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\modal\\mdproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\modal\\mdproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\modal\\mdajustarpreciounidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\modal\\mdajustarpreciounidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\sistema-negocio-ropa\\modal\\mdcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\modal\\mdcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\modal\\mdajustarpreciounidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\modal\\mdajustarpreciounidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\modal\\mdproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\modal\\mdproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\modal\\mdentradainventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\modal\\mdentradainventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\modal\\mdentradainventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\modal\\mdentradainventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5884F1A4-0F26-40B3-9447-75B612F801F3}|Datos\\Datos.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\datos\\negocio\\categoriada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5884F1A4-0F26-40B3-9447-75B612F801F3}|Datos\\Datos.csproj|solutionrelative:datos\\negocio\\categoriada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\principales\\frminventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\principales\\frminventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|c:\\users\\javie\\proyectos\\sistema-negocio-ropa\\sistema-negocio-ropa\\principales\\frminventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7CFD8827-EC60-43F4-B8E7-73159EF0D1B0}|Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa.csproj|solutionrelative:sistema-negocio-ropa\\principales\\frminventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,78 +54,120 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmProductos.cs",
-              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmProductos.cs",
-              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Principales\\frmProductos.cs",
-              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmProductos.cs",
-              "RelativeToolTip": "Sistema-Negocio-Ropa\\Principales\\frmProductos.cs",
-              "ViewState": "AQIAAP4BAAAAAAAAAAAcwBECAABzAAAA",
+              "DocumentIndex": 2,
+              "Title": "Utilidades.cs",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Utilidades.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Utilidades.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Utilidades.cs",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Utilidades.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAYwDcAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T22:27:48.012Z",
+              "WhenOpened": "2024-10-10T15:02:04.769Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "mdEntradasInventario.cs",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\Inventario\\mdEntradasInventario.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Modal\\Inventario\\mdEntradasInventario.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\Inventario\\mdEntradasInventario.cs",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Modal\\Inventario\\mdEntradasInventario.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAYwIIAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T14:50:06.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "mdEntradasInventario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\Inventario\\mdEntradasInventario.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Modal\\Inventario\\mdEntradasInventario.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\Inventario\\mdEntradasInventario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Modal\\Inventario\\mdEntradasInventario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T14:40:52.257Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "frmProductos.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmProductos.cs",
               "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Principales\\frmProductos.cs",
               "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmProductos.cs [Dise\u00F1o]",
               "RelativeToolTip": "Sistema-Negocio-Ropa\\Principales\\frmProductos.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T22:27:45.445Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "31275e6e-9747-4911-88ff-11a6187f1130",
-        "Display": 1,
-        "X": 491,
-        "Y": 338,
-        "Width": 925,
-        "Height": 531,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "mdProducto.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdProducto.cs",
-              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Modal\\mdProducto.cs",
-              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdProducto.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Sistema-Negocio-Ropa\\Modal\\mdProducto.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T19:04:10.105Z",
+              "WhenOpened": "2024-10-10T14:30:15.726Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "mdProducto.cs",
-              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdProducto.cs",
-              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Modal\\mdProducto.cs",
-              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdProducto.cs",
-              "RelativeToolTip": "Sistema-Negocio-Ropa\\Modal\\mdProducto.cs",
-              "ViewState": "AQIAAHwAAAAAAAAAAAApwJcAAAAgAAAA",
+              "DocumentIndex": 8,
+              "Title": "CategoriaDA.cs",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Datos\\Negocio\\CategoriaDA.cs",
+              "RelativeDocumentMoniker": "Datos\\Negocio\\CategoriaDA.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Datos\\Negocio\\CategoriaDA.cs",
+              "RelativeToolTip": "Datos\\Negocio\\CategoriaDA.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAFkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T19:04:19.117Z",
+              "WhenOpened": "2024-10-10T14:24:12.027Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "mdEntradaInventario.cs",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdEntradaInventario.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Modal\\mdEntradaInventario.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdEntradaInventario.cs",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Modal\\mdEntradaInventario.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAYwFIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T14:22:58.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "mdEntradaInventario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdEntradaInventario.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Modal\\mdEntradaInventario.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdEntradaInventario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Modal\\mdEntradaInventario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T14:06:20.287Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmInventario.cs",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmInventario.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Principales\\frmInventario.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmInventario.cs",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Principales\\frmInventario.cs",
+              "ViewState": "AQIAAOkAAAAAAAAAAAAYwPwAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T13:48:01.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmInventario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmInventario.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Principales\\frmInventario.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Principales\\frmInventario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Principales\\frmInventario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T13:47:28.533Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
@@ -111,13 +177,13 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "3fc981f9-3300-47d4-bb61-e71ce34874f5",
+        "Id": "cddc36ab-b125-4a87-9edf-94d4b53e8452",
         "Display": 1,
-        "X": 322,
-        "Y": 169,
-        "Width": 925,
-        "Height": 531,
-        "WindowState": 2
+        "X": 306,
+        "Y": 178,
+        "Width": 950,
+        "Height": 557,
+        "WindowState": 0
       },
       "DocumentGroups": [
         {
@@ -126,14 +192,27 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "mdCategoria.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdCategoria.cs",
-              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Modal\\mdCategoria.cs",
-              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdCategoria.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Sistema-Negocio-Ropa\\Modal\\mdCategoria.cs [Dise\u00F1o]",
+              "DocumentIndex": 4,
+              "Title": "mdAjustarPrecioUnidad.cs",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdAjustarPrecioUnidad.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Modal\\mdAjustarPrecioUnidad.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdAjustarPrecioUnidad.cs",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Modal\\mdAjustarPrecioUnidad.cs",
+              "ViewState": "AQIAAL0AAAAAAAAAAAAAAN8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T17:04:39.688Z",
+              "WhenOpened": "2024-10-10T14:50:08.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "mdAjustarPrecioUnidad.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdAjustarPrecioUnidad.cs",
+              "RelativeDocumentMoniker": "Sistema-Negocio-Ropa\\Modal\\mdAjustarPrecioUnidad.cs",
+              "ToolTip": "C:\\Users\\javie\\Proyectos\\Sistema-Negocio-Ropa\\Sistema-Negocio-Ropa\\Modal\\mdAjustarPrecioUnidad.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema-Negocio-Ropa\\Modal\\mdAjustarPrecioUnidad.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T14:46:43.93Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

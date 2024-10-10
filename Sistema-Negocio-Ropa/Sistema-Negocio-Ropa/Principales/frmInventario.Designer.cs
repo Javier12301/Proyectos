@@ -36,19 +36,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInventario));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsdMostrar = new System.Windows.Forms.ToolStripDropDownButton();
-            this.tsMenuProducto = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiID = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCodigo = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiNombre = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiStock = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiTipoProducto = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiPrecioVenta = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiPrecioCompra = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiEstado = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiNombreCategoria = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
@@ -60,7 +47,7 @@
             this.btnEntradaMasiva = new System.Windows.Forms.Button();
             this.btnSalidaMasiva = new System.Windows.Forms.Button();
             this.btnExportarP = new System.Windows.Forms.Button();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bNavegadorInventario = new System.Windows.Forms.BindingNavigator(this.components);
             this.bnpCantidadDeItems = new System.Windows.Forms.ToolStripLabel();
             this.bnpUltimoItem = new System.Windows.Forms.ToolStripButton();
             this.bnpSiguienteItem = new System.Windows.Forms.ToolStripButton();
@@ -72,19 +59,23 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.cmbFiltroCategoria = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.cmbFiltroEquipo = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.cmbFiltroTipoProducto = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.cmbFiltroEstado = new System.Windows.Forms.ToolStripComboBox();
+            this.cmbFiltroTalle = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsdMostrar = new System.Windows.Forms.ToolStripDropDownButton();
+            this.tsMenuProducto = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.panel4.SuspendLayout();
             this.flpContenedorBotones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bNavegadorInventario)).BeginInit();
+            this.bNavegadorInventario.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -92,7 +83,7 @@
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.flpContenedorBotones);
-            this.panel1.Controls.Add(this.bindingNavigator1);
+            this.panel1.Controls.Add(this.bNavegadorInventario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -110,126 +101,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1073, 247);
             this.panel5.TabIndex = 111;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(82)))), ((int)(((byte)(123)))));
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator1,
-            this.tsdMostrar});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1073, 25);
-            this.toolStrip1.TabIndex = 111;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // tsdMostrar
-            // 
-            this.tsdMostrar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsMenuProducto,
-            this.tsmiNombreCategoria});
-            this.tsdMostrar.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.tsdMostrar.ForeColor = System.Drawing.Color.White;
-            this.tsdMostrar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsdMostrar.Name = "tsdMostrar";
-            this.tsdMostrar.Size = new System.Drawing.Size(135, 22);
-            this.tsdMostrar.Text = "Mostrar Columnas";
-            // 
-            // tsMenuProducto
-            // 
-            this.tsMenuProducto.Checked = true;
-            this.tsMenuProducto.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tsMenuProducto.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiID,
-            this.tsmiCodigo,
-            this.tsmiNombre,
-            this.tsmiStock,
-            this.tsmiTipoProducto,
-            this.tsmiPrecioVenta,
-            this.tsmiPrecioCompra,
-            this.tsmiEstado});
-            this.tsMenuProducto.Name = "tsMenuProducto";
-            this.tsMenuProducto.Size = new System.Drawing.Size(136, 22);
-            this.tsMenuProducto.Text = "Producto";
-            // 
-            // tsmiID
-            // 
-            this.tsmiID.Checked = true;
-            this.tsmiID.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tsmiID.Name = "tsmiID";
-            this.tsmiID.Size = new System.Drawing.Size(167, 22);
-            this.tsmiID.Text = "ID";
-            // 
-            // tsmiCodigo
-            // 
-            this.tsmiCodigo.Checked = true;
-            this.tsmiCodigo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tsmiCodigo.Name = "tsmiCodigo";
-            this.tsmiCodigo.Size = new System.Drawing.Size(167, 22);
-            this.tsmiCodigo.Text = "Código";
-            // 
-            // tsmiNombre
-            // 
-            this.tsmiNombre.Checked = true;
-            this.tsmiNombre.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tsmiNombre.Name = "tsmiNombre";
-            this.tsmiNombre.Size = new System.Drawing.Size(167, 22);
-            this.tsmiNombre.Text = "Nombre";
-            // 
-            // tsmiStock
-            // 
-            this.tsmiStock.Checked = true;
-            this.tsmiStock.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tsmiStock.Name = "tsmiStock";
-            this.tsmiStock.Size = new System.Drawing.Size(167, 22);
-            this.tsmiStock.Text = "Stock";
-            // 
-            // tsmiTipoProducto
-            // 
-            this.tsmiTipoProducto.Checked = true;
-            this.tsmiTipoProducto.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tsmiTipoProducto.Name = "tsmiTipoProducto";
-            this.tsmiTipoProducto.Size = new System.Drawing.Size(167, 22);
-            this.tsmiTipoProducto.Text = "Tipo Producto";
-            // 
-            // tsmiPrecioVenta
-            // 
-            this.tsmiPrecioVenta.Checked = true;
-            this.tsmiPrecioVenta.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tsmiPrecioVenta.Name = "tsmiPrecioVenta";
-            this.tsmiPrecioVenta.Size = new System.Drawing.Size(167, 22);
-            this.tsmiPrecioVenta.Text = "Precio Venta";
-            // 
-            // tsmiPrecioCompra
-            // 
-            this.tsmiPrecioCompra.Checked = true;
-            this.tsmiPrecioCompra.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tsmiPrecioCompra.Name = "tsmiPrecioCompra";
-            this.tsmiPrecioCompra.Size = new System.Drawing.Size(167, 22);
-            this.tsmiPrecioCompra.Text = "Precio Compra";
-            // 
-            // tsmiEstado
-            // 
-            this.tsmiEstado.Checked = true;
-            this.tsmiEstado.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tsmiEstado.Name = "tsmiEstado";
-            this.tsmiEstado.Size = new System.Drawing.Size(167, 22);
-            this.tsmiEstado.Text = "Estado";
-            // 
-            // tsmiNombreCategoria
-            // 
-            this.tsmiNombreCategoria.Checked = true;
-            this.tsmiNombreCategoria.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tsmiNombreCategoria.Name = "tsmiNombreCategoria";
-            this.tsmiNombreCategoria.Size = new System.Drawing.Size(136, 22);
-            this.tsmiNombreCategoria.Text = "Categoría";
             // 
             // dgvInventario
             // 
@@ -311,6 +182,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(29, 23);
             this.btnBuscar.TabIndex = 96;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
@@ -320,6 +192,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(188, 22);
             this.txtBuscar.TabIndex = 3;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // cmbFiltroBuscar
             // 
@@ -331,6 +204,7 @@
             this.cmbFiltroBuscar.Name = "cmbFiltroBuscar";
             this.cmbFiltroBuscar.Size = new System.Drawing.Size(113, 24);
             this.cmbFiltroBuscar.TabIndex = 2;
+            this.cmbFiltroBuscar.SelectedIndexChanged += new System.EventHandler(this.cmbFiltroBuscar_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -385,6 +259,7 @@
             this.btnEntradaMasiva.Text = "Entrada a Inventario";
             this.btnEntradaMasiva.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEntradaMasiva.UseVisualStyleBackColor = false;
+            this.btnEntradaMasiva.Click += new System.EventHandler(this.btnEntradaMasiva_Click);
             // 
             // btnSalidaMasiva
             // 
@@ -403,6 +278,7 @@
             this.btnSalidaMasiva.Text = "Salida de Inventario";
             this.btnSalidaMasiva.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalidaMasiva.UseVisualStyleBackColor = false;
+            this.btnSalidaMasiva.Click += new System.EventHandler(this.btnSalidaMasiva_Click);
             // 
             // btnExportarP
             // 
@@ -422,19 +298,20 @@
             this.btnExportarP.Text = "Exportar";
             this.btnExportarP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExportarP.UseVisualStyleBackColor = false;
+            this.btnExportarP.Click += new System.EventHandler(this.btnExportarP_Click);
             // 
-            // bindingNavigator1
+            // bNavegadorInventario
             // 
-            this.bindingNavigator1.AddNewItem = null;
-            this.bindingNavigator1.AutoSize = false;
-            this.bindingNavigator1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bindingNavigator1.CountItem = this.bnpCantidadDeItems;
-            this.bindingNavigator1.DeleteItem = null;
-            this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigator1.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bindingNavigator1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bNavegadorInventario.AddNewItem = null;
+            this.bNavegadorInventario.AutoSize = false;
+            this.bNavegadorInventario.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bNavegadorInventario.CountItem = this.bnpCantidadDeItems;
+            this.bNavegadorInventario.DeleteItem = null;
+            this.bNavegadorInventario.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bNavegadorInventario.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bNavegadorInventario.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.bNavegadorInventario.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.bNavegadorInventario.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bnpUltimoItem,
             this.bnpSiguienteItem,
             this.bindingNavigatorSeparator,
@@ -446,27 +323,28 @@
             this.bindingNavigatorSeparator2,
             this.cmbFiltroCategoria,
             this.toolStripLabel1,
-            this.cmbFiltroEstado,
+            this.cmbFiltroEquipo,
             this.toolStripLabel2,
             this.toolStripSeparator2,
             this.toolStripLabel4,
-            this.cmbFiltroTipoProducto});
-            this.bindingNavigator1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 399);
-            this.bindingNavigator1.MoveFirstItem = this.bnpPrimerItem;
-            this.bindingNavigator1.MoveLastItem = this.bnpUltimoItem;
-            this.bindingNavigator1.MoveNextItem = this.bnpSiguienteItem;
-            this.bindingNavigator1.MovePreviousItem = this.bnpItemAnterior;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = this.bnpNumeroItem;
-            this.bindingNavigator1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1081, 49);
-            this.bindingNavigator1.TabIndex = 105;
-            this.bindingNavigator1.Text = "bindingNavigator1";
+            this.cmbFiltroTalle});
+            this.bNavegadorInventario.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.bNavegadorInventario.Location = new System.Drawing.Point(0, 399);
+            this.bNavegadorInventario.MoveFirstItem = this.bnpPrimerItem;
+            this.bNavegadorInventario.MoveLastItem = this.bnpUltimoItem;
+            this.bNavegadorInventario.MoveNextItem = this.bnpSiguienteItem;
+            this.bNavegadorInventario.MovePreviousItem = this.bnpItemAnterior;
+            this.bNavegadorInventario.Name = "bNavegadorInventario";
+            this.bNavegadorInventario.PositionItem = this.bnpNumeroItem;
+            this.bNavegadorInventario.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bNavegadorInventario.Size = new System.Drawing.Size(1081, 49);
+            this.bNavegadorInventario.TabIndex = 105;
+            this.bNavegadorInventario.Text = "bindingNavigator1";
             // 
             // bnpCantidadDeItems
             // 
             this.bnpCantidadDeItems.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.bnpCantidadDeItems.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.bnpCantidadDeItems.Name = "bnpCantidadDeItems";
             this.bnpCantidadDeItems.Size = new System.Drawing.Size(44, 46);
             this.bnpCantidadDeItems.Text = "de {0}";
@@ -548,14 +426,32 @@
             this.cmbFiltroCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.cmbFiltroCategoria.Name = "cmbFiltroCategoria";
             this.cmbFiltroCategoria.Size = new System.Drawing.Size(160, 49);
+            this.cmbFiltroCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbFiltroCategoria_SelectedIndexChanged);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripLabel1.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.toolStripLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(71, 46);
+            this.toolStripLabel1.Size = new System.Drawing.Size(63, 46);
             this.toolStripLabel1.Text = "Categoría:";
+            // 
+            // cmbFiltroEquipo
+            // 
+            this.cmbFiltroEquipo.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.cmbFiltroEquipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltroEquipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cmbFiltroEquipo.Name = "cmbFiltroEquipo";
+            this.cmbFiltroEquipo.Size = new System.Drawing.Size(160, 49);
+            this.cmbFiltroEquipo.SelectedIndexChanged += new System.EventHandler(this.cmbFiltroEquipo_SelectedIndexChanged);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(49, 46);
+            this.toolStripLabel2.Text = "Equipo:";
             // 
             // toolStripSeparator2
             // 
@@ -572,28 +468,56 @@
             this.toolStripLabel4.Size = new System.Drawing.Size(37, 46);
             this.toolStripLabel4.Text = "Talle:";
             // 
-            // cmbFiltroTipoProducto
+            // cmbFiltroTalle
             // 
-            this.cmbFiltroTipoProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFiltroTipoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.cmbFiltroTipoProducto.Name = "cmbFiltroTipoProducto";
-            this.cmbFiltroTipoProducto.Size = new System.Drawing.Size(160, 49);
+            this.cmbFiltroTalle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltroTalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cmbFiltroTalle.Name = "cmbFiltroTalle";
+            this.cmbFiltroTalle.Size = new System.Drawing.Size(160, 49);
+            this.cmbFiltroTalle.SelectedIndexChanged += new System.EventHandler(this.cmbFiltroTalle_SelectedIndexChanged);
             // 
-            // toolStripLabel2
+            // toolStrip1
             // 
-            this.toolStripLabel2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(49, 46);
-            this.toolStripLabel2.Text = "Equipo:";
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(82)))), ((int)(((byte)(123)))));
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator1,
+            this.tsdMostrar});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1073, 27);
+            this.toolStrip1.TabIndex = 112;
+            this.toolStrip1.Text = "toolStrip1";
             // 
-            // cmbFiltroEstado
+            // toolStripSeparator1
             // 
-            this.cmbFiltroEstado.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.cmbFiltroEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFiltroEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.cmbFiltroEstado.Name = "cmbFiltroEstado";
-            this.cmbFiltroEstado.Size = new System.Drawing.Size(160, 49);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // tsdMostrar
+            // 
+            this.tsdMostrar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsMenuProducto});
+            this.tsdMostrar.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tsdMostrar.ForeColor = System.Drawing.Color.White;
+            this.tsdMostrar.Image = global::Sistema_Negocio_Ropa.Properties.Resources.checkList_Blanco;
+            this.tsdMostrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsdMostrar.Name = "tsdMostrar";
+            this.tsdMostrar.Size = new System.Drawing.Size(155, 24);
+            this.tsdMostrar.Text = "Mostrar Columnas";
+            this.tsdMostrar.DropDownClosed += new System.EventHandler(this.tsdMostrar_DropDownClosed);
+            this.tsdMostrar.DropDownOpened += new System.EventHandler(this.tsdMostrar_DropDownOpened);
+            // 
+            // tsMenuProducto
+            // 
+            this.tsMenuProducto.Checked = true;
+            this.tsMenuProducto.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.tsMenuProducto.Name = "tsMenuProducto";
+            this.tsMenuProducto.Size = new System.Drawing.Size(180, 22);
+            this.tsMenuProducto.Text = "Producto";
+            this.tsMenuProducto.CheckedChanged += new System.EventHandler(this.ColumnMenuPadre_CheckedChanged);
+            this.tsMenuProducto.Click += new System.EventHandler(this.ColumMenuItem_Click);
             // 
             // frmInventario
             // 
@@ -604,18 +528,19 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmInventario";
             this.Text = "frmInventario";
+            this.Load += new System.EventHandler(this.frmInventario_Load);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.flpContenedorBotones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.bindingNavigator1.ResumeLayout(false);
-            this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bNavegadorInventario)).EndInit();
+            this.bNavegadorInventario.ResumeLayout(false);
+            this.bNavegadorInventario.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -624,19 +549,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripDropDownButton tsdMostrar;
-        private System.Windows.Forms.ToolStripMenuItem tsMenuProducto;
-        private System.Windows.Forms.ToolStripMenuItem tsmiID;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCodigo;
-        private System.Windows.Forms.ToolStripMenuItem tsmiNombre;
-        private System.Windows.Forms.ToolStripMenuItem tsmiStock;
-        private System.Windows.Forms.ToolStripMenuItem tsmiTipoProducto;
-        private System.Windows.Forms.ToolStripMenuItem tsmiPrecioVenta;
-        private System.Windows.Forms.ToolStripMenuItem tsmiPrecioCompra;
-        private System.Windows.Forms.ToolStripMenuItem tsmiEstado;
-        private System.Windows.Forms.ToolStripMenuItem tsmiNombreCategoria;
         private System.Windows.Forms.DataGridView dgvInventario;
         private System.Windows.Forms.Panel panel4;
         private FontAwesome.Sharp.IconButton btnBuscar;
@@ -648,7 +560,7 @@
         private System.Windows.Forms.Button btnEntradaMasiva;
         private System.Windows.Forms.Button btnSalidaMasiva;
         private System.Windows.Forms.Button btnExportarP;
-        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.BindingNavigator bNavegadorInventario;
         private System.Windows.Forms.ToolStripLabel bnpCantidadDeItems;
         private System.Windows.Forms.ToolStripButton bnpUltimoItem;
         private System.Windows.Forms.ToolStripButton bnpSiguienteItem;
@@ -662,8 +574,12 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
-        private System.Windows.Forms.ToolStripComboBox cmbFiltroTipoProducto;
-        private System.Windows.Forms.ToolStripComboBox cmbFiltroEstado;
+        private System.Windows.Forms.ToolStripComboBox cmbFiltroTalle;
+        private System.Windows.Forms.ToolStripComboBox cmbFiltroEquipo;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripDropDownButton tsdMostrar;
+        private System.Windows.Forms.ToolStripMenuItem tsMenuProducto;
     }
 }
