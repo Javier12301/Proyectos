@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Sistema_Negocio_Ropa.Modal;
 
 namespace Sistema_Negocio_Ropa.Principales
 {
@@ -31,7 +32,15 @@ namespace Sistema_Negocio_Ropa.Principales
 
         private void frmInventario_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                CargarLista();
+                CargarPermisos();
+                CargarFiltros();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private BindingSource bsProducto = new BindingSource();
@@ -178,8 +187,8 @@ namespace Sistema_Negocio_Ropa.Principales
             }
 
             // Verificar si el módulo 'formCategorias' está permitido
-            Modulo moduloCategoria = modulosPermitidos.FirstOrDefault(m => m.Nombre == "formCategorias");
-            if (moduloCategoria != null)
+            Modulo moduloSalida = modulosPermitidos.FirstOrDefault(m => m.Nombre == "formInventario");
+            if (moduloSalida != null)
             {
                 if (permisosDeUsuario.Comprar)
                 {
@@ -251,7 +260,13 @@ namespace Sistema_Negocio_Ropa.Principales
         {
             if (permisosDeUsuario.Comprar)
             {
-
+                using (var modal = new mdEntradaInventario())
+                {
+                    if (modal.ShowDialog() == DialogResult.OK)
+                    {
+                        CargarLista();
+                    }
+                }
             }
             else
             {

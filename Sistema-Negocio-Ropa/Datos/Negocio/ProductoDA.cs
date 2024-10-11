@@ -20,6 +20,39 @@ namespace Datos.Negocio
         }
 
 
+        // Actualizar Stock puede ser - o +
+        public bool ActualizarStock(int productoID, int nuevaCantidad)
+        {
+            bool actualizado = false;
+            using (SqlConnection oContexto = conexion.EstablecerConexion())
+            {
+                StringBuilder query = new StringBuilder();
+                query.AppendLine("UPDATE Producto");
+                query.AppendLine("SET Stock = CASE WHEN Stock + @nuevaCantidad < 0 THEN 0 ELSE Stock + @nuevaCantidad END");
+                query.AppendLine("WHERE ProductoID = @productoID");
+
+                try
+                {
+                    using (SqlCommand cmd = new SqlCommand(query.ToString(), oContexto))
+                    {
+                        cmd.Parameters.AddWithValue("@nuevaCantidad", nuevaCantidad);
+                        cmd.Parameters.AddWithValue("@productoID", productoID);
+                        oContexto.Open();
+                        int filasAfectadas = cmd.ExecuteNonQuery();
+                        actualizado = filasAfectadas > 0;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al actualizar el stock del producto: " + ex.Message);
+                }
+            }
+            return actualizado;
+        }
+
+
+
 
         // actualizar precio, usando ProductoID y NuevoPrecio
         public bool ActualizarPrecio(int productoID, decimal nuevoPrecio)

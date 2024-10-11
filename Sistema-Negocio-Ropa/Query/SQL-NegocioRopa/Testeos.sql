@@ -14,13 +14,11 @@ VALUES
     ('usuario110', 'contraseña10', 'Nombre10', 'Apellido10', 'correo10@example.com', 1, 1);
 GO GO GO;
 
-Select * from Producto
 
-SELECT COUNT(*) FROM Producto WHERE Nombre = 'producto 1'
+SELECT * FROM Producto
+WHERE ProductoID = 31
 
-
-
-
-
-DECLARE @Porcentaje DECIMAL(5, 2) = 25; -- Por ejemplo, un aumento del 20%
-EXEC sp_ObtenerProductosConNuevoPrecio @Buscar = '', @FiltroCategoria = 'Camiseta de futbol', @Porcentaje = @Porcentaje;
+/*
+STOCK ACTUAL: 262
+ESPERADO: 255
+*/

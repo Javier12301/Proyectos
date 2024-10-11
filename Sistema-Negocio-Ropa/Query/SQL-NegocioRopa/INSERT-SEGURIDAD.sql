@@ -60,8 +60,10 @@ GO
 -- Insertar las acciones para el módulo formInventario
 INSERT INTO Accion(Nombre, ModuloID)
 VALUES 
-    ('Comprar', (SELECT ModuloID FROM Modulo WHERE Nombre = 'formInventario'));
+    ('Comprar', (SELECT ModuloID FROM Modulo WHERE Nombre = 'formInventario')),
+	('Exportar', (SELECT ModuloID FROM Modulo WHERE Nombre = 'formInventario'));
 GO
+
 -- Insertar las acciones para el módulo formReportes
 INSERT INTO Accion(Nombre, ModuloID)
 VALUES 

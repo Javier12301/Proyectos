@@ -29,11 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdEntradaInventario));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dtpFin = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -55,10 +59,6 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnDetalles = new System.Windows.Forms.Button();
             this.btnExportar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dtpFin = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -100,6 +100,47 @@
             this.panel4.Size = new System.Drawing.Size(575, 33);
             this.panel4.TabIndex = 108;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(234, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 20);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Desde";
+            // 
+            // dtpInicio
+            // 
+            this.dtpInicio.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpInicio.Location = new System.Drawing.Point(287, 2);
+            this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.Size = new System.Drawing.Size(114, 27);
+            this.dtpInicio.TabIndex = 4;
+            this.dtpInicio.ValueChanged += new System.EventHandler(this.dtpInicio_ValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(404, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 20);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Hasta";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dtpFin
+            // 
+            this.dtpFin.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFin.Location = new System.Drawing.Point(454, 2);
+            this.dtpFin.Name = "dtpFin";
+            this.dtpFin.Size = new System.Drawing.Size(114, 27);
+            this.dtpFin.TabIndex = 5;
+            this.dtpFin.ValueChanged += new System.EventHandler(this.dtpFin_ValueChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -134,9 +175,10 @@
             this.btnCancelar.Location = new System.Drawing.Point(474, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(104, 31);
-            this.btnCancelar.TabIndex = 28;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Salir";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // panel2
             // 
@@ -232,22 +274,22 @@
             // dgvCompras
             // 
             this.dgvCompras.AllowUserToAddRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvCompras.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvCompras.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCompras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCompras.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCompras.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCompras.ColumnHeadersHeight = 40;
             this.dgvCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvCompras.GridColor = System.Drawing.Color.White;
@@ -257,7 +299,9 @@
             this.dgvCompras.RowHeadersVisible = false;
             this.dgvCompras.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCompras.Size = new System.Drawing.Size(568, 248);
-            this.dgvCompras.TabIndex = 111;
+            this.dgvCompras.TabIndex = 0;
+            this.dgvCompras.TabStop = false;
+            this.dgvCompras.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCompras_CellDoubleClick);
             // 
             // flpContenedor
             // 
@@ -312,7 +356,6 @@
             // btnNuevo
             // 
             this.btnNuevo.BackColor = System.Drawing.Color.White;
-            this.btnNuevo.Enabled = false;
             this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -322,17 +365,15 @@
             this.btnNuevo.Location = new System.Drawing.Point(3, 3);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(84, 59);
-            this.btnNuevo.TabIndex = 9;
+            this.btnNuevo.TabIndex = 1;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Visible = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnDetalles
             // 
             this.btnDetalles.BackColor = System.Drawing.Color.White;
-            this.btnDetalles.Enabled = false;
             this.btnDetalles.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnDetalles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetalles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -342,17 +383,15 @@
             this.btnDetalles.Location = new System.Drawing.Point(93, 3);
             this.btnDetalles.Name = "btnDetalles";
             this.btnDetalles.Size = new System.Drawing.Size(84, 59);
-            this.btnDetalles.TabIndex = 10;
+            this.btnDetalles.TabIndex = 2;
             this.btnDetalles.Text = "Detalles";
             this.btnDetalles.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDetalles.UseVisualStyleBackColor = false;
-            this.btnDetalles.Visible = false;
             this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
             // 
             // btnExportar
             // 
             this.btnExportar.BackColor = System.Drawing.Color.White;
-            this.btnExportar.Enabled = false;
             this.btnExportar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -362,53 +401,11 @@
             this.btnExportar.Location = new System.Drawing.Point(183, 3);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(84, 59);
-            this.btnExportar.TabIndex = 11;
+            this.btnExportar.TabIndex = 3;
             this.btnExportar.Text = "Exportar";
             this.btnExportar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExportar.UseVisualStyleBackColor = false;
-            this.btnExportar.Visible = false;
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(234, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Desde";
-            // 
-            // dtpInicio
-            // 
-            this.dtpInicio.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpInicio.Location = new System.Drawing.Point(287, 2);
-            this.dtpInicio.Name = "dtpInicio";
-            this.dtpInicio.Size = new System.Drawing.Size(114, 27);
-            this.dtpInicio.TabIndex = 14;
-            this.dtpInicio.ValueChanged += new System.EventHandler(this.dtpInicio_ValueChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(404, 6);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 20);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Hasta";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dtpFin
-            // 
-            this.dtpFin.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFin.Location = new System.Drawing.Point(454, 2);
-            this.dtpFin.Name = "dtpFin";
-            this.dtpFin.Size = new System.Drawing.Size(114, 27);
-            this.dtpFin.TabIndex = 15;
-            this.dtpFin.ValueChanged += new System.EventHandler(this.dtpFin_ValueChanged);
             // 
             // mdEntradaInventario
             // 

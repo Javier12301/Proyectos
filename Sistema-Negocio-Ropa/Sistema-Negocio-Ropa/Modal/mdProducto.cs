@@ -321,8 +321,6 @@ namespace Sistema_Negocio_Ropa.Modal
                 txtStock.Text = producto.Stock.ToString();
                 txtCantidadMinima.Text = producto.StockMinimo.ToString();
                 chkEstado.Checked = producto.Estado;
-
-                txtStock.ReadOnly = true;
             }
 
         }

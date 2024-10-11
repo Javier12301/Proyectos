@@ -12,6 +12,8 @@ namespace Negocio.Negocio
         public string Nombre { get; set; }
         public Categoria oCategoria { get; set; }
         public decimal PrecioVenta { get; set; }
+        // ESTE SOLO SE USA PARA DETALLE COMPRA , NO ES NECESARIO PARA EL PRODUCTO
+        public decimal PrecioCompra { get; set; }
         public string Talle { get; set; }
         public string Equipo { get; set; }
         public int Stock { get; set; }

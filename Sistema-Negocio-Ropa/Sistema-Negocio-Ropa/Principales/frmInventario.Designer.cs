@@ -36,6 +36,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInventario));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsdMostrar = new System.Windows.Forms.ToolStripDropDownButton();
+            this.tsMenuProducto = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
@@ -64,18 +68,14 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.cmbFiltroTalle = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsdMostrar = new System.Windows.Forms.ToolStripDropDownButton();
-            this.tsMenuProducto = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.panel4.SuspendLayout();
             this.flpContenedorBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bNavegadorInventario)).BeginInit();
             this.bNavegadorInventario.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -101,6 +101,49 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1073, 247);
             this.panel5.TabIndex = 111;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(82)))), ((int)(((byte)(123)))));
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator1,
+            this.tsdMostrar});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1073, 27);
+            this.toolStrip1.TabIndex = 112;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // tsdMostrar
+            // 
+            this.tsdMostrar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsMenuProducto});
+            this.tsdMostrar.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tsdMostrar.ForeColor = System.Drawing.Color.White;
+            this.tsdMostrar.Image = global::Sistema_Negocio_Ropa.Properties.Resources.checkList_Blanco;
+            this.tsdMostrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsdMostrar.Name = "tsdMostrar";
+            this.tsdMostrar.Size = new System.Drawing.Size(155, 24);
+            this.tsdMostrar.Text = "Mostrar Columnas";
+            this.tsdMostrar.DropDownClosed += new System.EventHandler(this.tsdMostrar_DropDownClosed);
+            this.tsdMostrar.DropDownOpened += new System.EventHandler(this.tsdMostrar_DropDownOpened);
+            // 
+            // tsMenuProducto
+            // 
+            this.tsMenuProducto.Checked = true;
+            this.tsMenuProducto.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.tsMenuProducto.Name = "tsMenuProducto";
+            this.tsMenuProducto.Size = new System.Drawing.Size(133, 22);
+            this.tsMenuProducto.Text = "Producto";
+            this.tsMenuProducto.CheckedChanged += new System.EventHandler(this.ColumnMenuPadre_CheckedChanged);
+            this.tsMenuProducto.Click += new System.EventHandler(this.ColumMenuItem_Click);
             // 
             // dgvInventario
             // 
@@ -255,7 +298,7 @@
             this.btnEntradaMasiva.Name = "btnEntradaMasiva";
             this.btnEntradaMasiva.Size = new System.Drawing.Size(118, 74);
             this.btnEntradaMasiva.TabIndex = 13;
-            this.btnEntradaMasiva.Tag = "Entrada";
+            this.btnEntradaMasiva.Tag = "Comprar";
             this.btnEntradaMasiva.Text = "Entrada a Inventario";
             this.btnEntradaMasiva.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEntradaMasiva.UseVisualStyleBackColor = false;
@@ -476,49 +519,6 @@
             this.cmbFiltroTalle.Size = new System.Drawing.Size(160, 49);
             this.cmbFiltroTalle.SelectedIndexChanged += new System.EventHandler(this.cmbFiltroTalle_SelectedIndexChanged);
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(82)))), ((int)(((byte)(123)))));
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator1,
-            this.tsdMostrar});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1073, 27);
-            this.toolStrip1.TabIndex = 112;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // tsdMostrar
-            // 
-            this.tsdMostrar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsMenuProducto});
-            this.tsdMostrar.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.tsdMostrar.ForeColor = System.Drawing.Color.White;
-            this.tsdMostrar.Image = global::Sistema_Negocio_Ropa.Properties.Resources.checkList_Blanco;
-            this.tsdMostrar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsdMostrar.Name = "tsdMostrar";
-            this.tsdMostrar.Size = new System.Drawing.Size(155, 24);
-            this.tsdMostrar.Text = "Mostrar Columnas";
-            this.tsdMostrar.DropDownClosed += new System.EventHandler(this.tsdMostrar_DropDownClosed);
-            this.tsdMostrar.DropDownOpened += new System.EventHandler(this.tsdMostrar_DropDownOpened);
-            // 
-            // tsMenuProducto
-            // 
-            this.tsMenuProducto.Checked = true;
-            this.tsMenuProducto.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tsMenuProducto.Name = "tsMenuProducto";
-            this.tsMenuProducto.Size = new System.Drawing.Size(180, 22);
-            this.tsMenuProducto.Text = "Producto";
-            this.tsMenuProducto.CheckedChanged += new System.EventHandler(this.ColumnMenuPadre_CheckedChanged);
-            this.tsMenuProducto.Click += new System.EventHandler(this.ColumMenuItem_Click);
-            // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -532,6 +532,8 @@
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -539,8 +541,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bNavegadorInventario)).EndInit();
             this.bNavegadorInventario.ResumeLayout(false);
             this.bNavegadorInventario.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -231,11 +231,17 @@
     <Compile Include="Modal\buscadorProductos.Designer.cs">
       <DependentUpon>buscadorProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modal\Inventario\mdEntradasInventario.cs">
+    <Compile Include="Modal\Inventario\mdDetallesCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modal\Inventario\mdEntradasInventario.Designer.cs">
-      <DependentUpon>mdEntradasInventario.cs</DependentUpon>
+    <Compile Include="Modal\Inventario\mdDetallesCompra.Designer.cs">
+      <DependentUpon>mdDetallesCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modal\Inventario\mdRegistrarCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modal\Inventario\mdRegistrarCompras.Designer.cs">
+      <DependentUpon>mdRegistrarCompras.cs</DependentUpon>
     </Compile>
     <Compile Include="Modal\mdAjustarPrecioCategoria.cs">
       <SubType>Form</SubType>
@@ -391,8 +397,11 @@
     <EmbeddedResource Include="Modal\buscadorProductos.resx">
       <DependentUpon>buscadorProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modal\Inventario\mdEntradasInventario.resx">
-      <DependentUpon>mdEntradasInventario.cs</DependentUpon>
+    <EmbeddedResource Include="Modal\Inventario\mdDetallesCompra.resx">
+      <DependentUpon>mdDetallesCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modal\Inventario\mdRegistrarCompras.resx">
+      <DependentUpon>mdRegistrarCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modal\mdAjustarPrecioCategoria.resx">
       <DependentUpon>mdAjustarPrecioCategoria.cs</DependentUpon>

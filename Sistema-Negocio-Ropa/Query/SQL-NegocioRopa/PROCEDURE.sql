@@ -303,7 +303,7 @@ END;
 
 
 -- PROCEDIMIENTO PARA AJUSTAR PRECIO POR CATEGORIA
-ALTER PROCEDURE sp_ObtenerProductosConNuevoPrecio
+CREATE PROCEDURE sp_ObtenerProductosConNuevoPrecio
     @Buscar NVARCHAR(255),
     @FiltroCategoria NVARCHAR(50),
     @Porcentaje DECIMAL(5, 2)
@@ -327,4 +327,52 @@ BEGIN
         C.Nombre = @FiltroCategoria
 END;
 
+
+-- COMPRAR REALIZADAS
+CREATE PROCEDURE sp_ObtenerComprasConTotales
+    @FiltroEstado NVARCHAR(50),
+    @FechaInicio DATE,
+    @FechaFin DATE
+AS
+BEGIN
+    SELECT 
+        C.CompraID AS Folio, 
+        C.Factura AS Documento, 
+        C.FechaCompra AS 'Fecha de compra', 
+        SUM(DC.Cantidad) AS 'Cantidad de productos', 
+        SUM(DC.Cantidad * DC.PrecioCompra) AS 'Precio total'
+    FROM 
+        Compra C
+        INNER JOIN Detalle_Compra DC ON C.CompraID = DC.CompraID
+    WHERE 
+        (
+            @FiltroEstado = 'Todos' OR 
+            (C.Estado = 1 AND @FiltroEstado = 'Activo') OR 
+            (C.Estado = 0 AND @FiltroEstado = 'Cancelado')
+        )
+        AND C.FechaCompra BETWEEN @FechaInicio AND @FechaFin
+    GROUP BY 
+        C.CompraID, 
+        C.Factura,
+        C.FechaCompra;
+END;
+
+
+-- DETALLE DE COMPRA
+CREATE PROCEDURE sp_ObtenerDetalleCompra
+    @CompraID INT
+AS
+BEGIN
+    SELECT 
+		P.ProductoID AS 'ID',
+        P.Nombre AS 'Nombre de Producto',
+        DC.Cantidad AS 'Cantidad Comprada',
+        DC.PrecioCompra AS 'Precio de Compra',
+        DC.Cantidad * DC.PrecioCompra AS 'Sub Total'
+    FROM 
+        Detalle_Compra DC
+        INNER JOIN Producto P ON DC.ProductoID = P.ProductoID
+    WHERE 
+        DC.CompraID = @CompraID;
+END;
 
