@@ -41,8 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Negocio\CajaDA.cs" />
     <Compile Include="Negocio\CategoriaDA.cs" />
     <Compile Include="Negocio\CompraDA.cs" />
+    <Compile Include="Negocio\NegocioDA.cs" />
     <Compile Include="Negocio\ProductoDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seguridad\AccionDA.cs" />

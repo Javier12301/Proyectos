@@ -13,6 +13,9 @@ using Negocio.Seguridad;
 using Datos.Seguridad;
 using Sistema_Negocio_Ropa.Principales;
 using Guna.UI.WinForms;
+using Sistema_Negocio_Ropa.Modal.Caja;
+using Datos.Negocio;
+using Negocio.Negocio;
 
 namespace Sistema_Negocio_Ropa
 {
@@ -23,11 +26,13 @@ namespace Sistema_Negocio_Ropa
         private Utilidades uiUtilidades = Utilidades.ObtenerInstancia;
         private UsuarioDA lUsuario;
         private GrupoDA lGrupo;
+        private CajaDA lCaja;
         public frmLogin()
         {
             InitializeComponent();
             lUsuario = new UsuarioDA();
             lGrupo = new GrupoDA();
+            lCaja = new CajaDA();
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -86,11 +91,35 @@ namespace Sistema_Negocio_Ropa
                 // Iniciar sesión y registrar auditoría
                 oUsuario.ModulosPermitidos = lGrupo.ObtenerModulosPermitidos(oUsuario.ObtenerGrupoID());
                 Sesion.IniciarSesion(oUsuario);
-                abrirFormMain();
+
+                bool cajaAbierta = lCaja.VerificarCajaAbierta();
+                Caja oCaja = new Caja();
+                if (cajaAbierta)
+                {
+                    
+                    oCaja = lCaja.ObtenerCajaAbierta();
+                    // la caja sigue abierta, cargarla en la sesión y arrancar main.
+                    MessageBox.Show("No se hizo el cierre de caja anterior, para abrir una nueva caja, ingrese al módulo de ventas y cierre la caja.", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    abrirFormMain();
+                }
+                else
+                {
+                    using (var abrirCaja = new mdAperturaCaja())
+                    {
+                        var resultado = abrirCaja.ShowDialog();
+                        if (resultado == DialogResult.OK)
+                        {
+                            oCaja = abrirCaja._caja;
+                            Sesion.IniciarCaja(oCaja);
+                            abrirFormMain();
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"{ex.Message}", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Sesion.CerrarSesion();
             }
         }
 

@@ -49,7 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.flpContenedorBotones = new System.Windows.Forms.FlowLayoutPanel();
             this.btnEntradaMasiva = new System.Windows.Forms.Button();
-            this.btnSalidaMasiva = new System.Windows.Forms.Button();
             this.btnExportarP = new System.Windows.Forms.Button();
             this.bNavegadorInventario = new System.Windows.Forms.BindingNavigator(this.components);
             this.bnpCantidadDeItems = new System.Windows.Forms.ToolStripLabel();
@@ -277,7 +276,6 @@
             this.flpContenedorBotones.BackColor = System.Drawing.Color.LightGray;
             this.flpContenedorBotones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpContenedorBotones.Controls.Add(this.btnEntradaMasiva);
-            this.flpContenedorBotones.Controls.Add(this.btnSalidaMasiva);
             this.flpContenedorBotones.Controls.Add(this.btnExportarP);
             this.flpContenedorBotones.Location = new System.Drawing.Point(0, 4);
             this.flpContenedorBotones.Margin = new System.Windows.Forms.Padding(4);
@@ -304,25 +302,6 @@
             this.btnEntradaMasiva.UseVisualStyleBackColor = false;
             this.btnEntradaMasiva.Click += new System.EventHandler(this.btnEntradaMasiva_Click);
             // 
-            // btnSalidaMasiva
-            // 
-            this.btnSalidaMasiva.BackColor = System.Drawing.Color.White;
-            this.btnSalidaMasiva.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnSalidaMasiva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalidaMasiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalidaMasiva.ForeColor = System.Drawing.Color.Black;
-            this.btnSalidaMasiva.Image = ((System.Drawing.Image)(resources.GetObject("btnSalidaMasiva.Image")));
-            this.btnSalidaMasiva.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalidaMasiva.Location = new System.Drawing.Point(127, 3);
-            this.btnSalidaMasiva.Name = "btnSalidaMasiva";
-            this.btnSalidaMasiva.Size = new System.Drawing.Size(118, 74);
-            this.btnSalidaMasiva.TabIndex = 14;
-            this.btnSalidaMasiva.Tag = "Salida";
-            this.btnSalidaMasiva.Text = "Salida de Inventario";
-            this.btnSalidaMasiva.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSalidaMasiva.UseVisualStyleBackColor = false;
-            this.btnSalidaMasiva.Click += new System.EventHandler(this.btnSalidaMasiva_Click);
-            // 
             // btnExportarP
             // 
             this.btnExportarP.BackColor = System.Drawing.Color.White;
@@ -332,7 +311,7 @@
             this.btnExportarP.ForeColor = System.Drawing.Color.Black;
             this.btnExportarP.Image = ((System.Drawing.Image)(resources.GetObject("btnExportarP.Image")));
             this.btnExportarP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExportarP.Location = new System.Drawing.Point(252, 4);
+            this.btnExportarP.Location = new System.Drawing.Point(128, 4);
             this.btnExportarP.Margin = new System.Windows.Forms.Padding(4);
             this.btnExportarP.Name = "btnExportarP";
             this.btnExportarP.Size = new System.Drawing.Size(118, 73);
@@ -558,7 +537,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flpContenedorBotones;
         private System.Windows.Forms.Button btnEntradaMasiva;
-        private System.Windows.Forms.Button btnSalidaMasiva;
         private System.Windows.Forms.Button btnExportarP;
         private System.Windows.Forms.BindingNavigator bNavegadorInventario;
         private System.Windows.Forms.ToolStripLabel bnpCantidadDeItems;

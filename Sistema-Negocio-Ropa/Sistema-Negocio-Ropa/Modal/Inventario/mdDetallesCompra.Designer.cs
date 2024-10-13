@@ -39,6 +39,8 @@
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNombreyApellido = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtFolio = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,11 +51,10 @@
             this.txtTipoComprobante = new System.Windows.Forms.Label();
             this.dgvDetallesCompras = new System.Windows.Forms.DataGridView();
             this.flpContenedorBotones = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.Label();
+            this.btnExportarP = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -177,6 +178,30 @@
             this.txtNombreyApellido.TabIndex = 243;
             this.txtNombreyApellido.Text = "Admin";
             this.txtNombreyApellido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(149, 1);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 17);
+            this.label2.TabIndex = 244;
+            this.label2.Text = "Usuario:";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.AutoEllipsis = true;
+            this.txtUsuario.AutoSize = true;
+            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(211, 1);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(0);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(43, 15);
+            this.txtUsuario.TabIndex = 245;
+            this.txtUsuario.Text = "Admin";
+            this.txtUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // flowLayoutPanel2
             // 
@@ -323,10 +348,30 @@
             this.flpContenedorBotones.BackColor = System.Drawing.Color.LightGray;
             this.flpContenedorBotones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpContenedorBotones.Controls.Add(this.btnCancelar);
+            this.flpContenedorBotones.Controls.Add(this.btnExportarP);
             this.flpContenedorBotones.Location = new System.Drawing.Point(3, 3);
             this.flpContenedorBotones.Name = "flpContenedorBotones";
             this.flpContenedorBotones.Size = new System.Drawing.Size(717, 66);
             this.flpContenedorBotones.TabIndex = 208;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.White;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCancelar.Location = new System.Drawing.Point(3, 3);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(84, 59);
+            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.Tag = "Cancelar";
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // panel3
             // 
@@ -356,48 +401,25 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnCancelar
+            // btnExportarP
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.White;
-            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(3, 3);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(84, 59);
-            this.btnCancelar.TabIndex = 9;
-            this.btnCancelar.Tag = "Cancelar";
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(149, 1);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 17);
-            this.label2.TabIndex = 244;
-            this.label2.Text = "Usuario:";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.AutoEllipsis = true;
-            this.txtUsuario.AutoSize = true;
-            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(211, 1);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(0);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(43, 15);
-            this.txtUsuario.TabIndex = 245;
-            this.txtUsuario.Text = "Admin";
-            this.txtUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportarP.BackColor = System.Drawing.Color.White;
+            this.btnExportarP.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnExportarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportarP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarP.ForeColor = System.Drawing.Color.Black;
+            this.btnExportarP.Image = ((System.Drawing.Image)(resources.GetObject("btnExportarP.Image")));
+            this.btnExportarP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExportarP.Location = new System.Drawing.Point(94, 4);
+            this.btnExportarP.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExportarP.Name = "btnExportarP";
+            this.btnExportarP.Size = new System.Drawing.Size(84, 59);
+            this.btnExportarP.TabIndex = 13;
+            this.btnExportarP.Tag = "Exportar";
+            this.btnExportarP.Text = "Exportar";
+            this.btnExportarP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExportarP.UseVisualStyleBackColor = false;
+            this.btnExportarP.Click += new System.EventHandler(this.btnExportarP_Click);
             // 
             // mdDetallesCompra
             // 
@@ -452,5 +474,6 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label txtUsuario;
+        private System.Windows.Forms.Button btnExportarP;
     }
 }

@@ -66,6 +66,7 @@ namespace Sistema_Negocio_Ropa.Modal.Inventario
                 oCompra.oUsuario = lUsuario.ObtenerUsuarioPorID(oCompra.oUsuario.UsuarioID);
                 txtNombreyApellido.Text = oCompra.oUsuario.ObtenerNombreCompleto();
                 txtUsuario.Text = oCompra.oUsuario.ObtenerNombreUsuario();        
+                txtFolio.Text = oCompra.CompraID.ToString();
                 pbCancelado.Visible = !oCompra.Estado;
                 btnCancelar.Enabled = oCompra.Estado;
             }
@@ -161,6 +162,19 @@ namespace Sistema_Negocio_Ropa.Modal.Inventario
             {
                 MessageBox.Show("No se ha seleccionado una compra válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
+            }
+        }
+
+        private void btnExportarP_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // eliminar "/"
+                string fecha = txtFecha.Text.Replace("/", "-");
+                uiUtilidades.ExportarDataGridViewAExcel(dgvDetallesCompras, $"Detalle de compras -Folio {txtFolio.Text} - Fecha {fecha}", "Detalle Compras", "Inventario");
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al exportar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

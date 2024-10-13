@@ -511,8 +511,6 @@ namespace Datos.Negocio
                         Producto producto = ObtenerProductoPorIDD(productoID);
                         producto.Estado = false;
                         ModificarProductoD(producto);
-
-                        throw new Exception("El producto está siendo referenciado por otros registros en la base de datos. Se ha establecido como inactivo.");
                     }
                     else
                     {

@@ -28,6 +28,12 @@
           <AssociatedConnUserName />
           <FullPath>DELETES.sql</FullPath>
         </FileNode>
+        <FileNode Name="INSERT-NEGOCIO.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JAVI12301:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JAVI12301</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>INSERT-NEGOCIO.sql</FullPath>
+        </FileNode>
         <FileNode Name="INSERT-SEGURIDAD.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JAVI12301:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>JAVI12301</AssociatedConnSrvName>

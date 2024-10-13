@@ -174,7 +174,6 @@ namespace Sistema_Negocio_Ropa.Modal.Inventario
                         // cargar datos al datagridview
                         Producto _producto = new Producto();
                         _producto = productoSeleccionado;
-                        _producto.Stock += cantidad;
 
                         //Verificar si el producto ya fue agregado al datagridview
                         DataGridViewRow existeFila = dgvProductos.Rows
@@ -221,7 +220,7 @@ namespace Sistema_Negocio_Ropa.Modal.Inventario
         {
             if (dgvProductos.Rows.Count == 0)
             {
-                txtTotal.Text = "0.00";  // Valor por defecto si no hay productos
+                txtTotal.Text = "$ 0.00";  // Valor por defecto si no hay productos
             }
             else
             {
@@ -235,7 +234,7 @@ namespace Sistema_Negocio_Ropa.Modal.Inventario
                     }
                 }
 
-                txtTotal.Text = uiUtilidades.FormatearMonedaString(total);  // Formatear el total en moneda argentina
+                txtTotal.Text = "$ "+ uiUtilidades.FormatearMonedaString(total);  // Formatear el total en moneda argentina
             }
         }
 

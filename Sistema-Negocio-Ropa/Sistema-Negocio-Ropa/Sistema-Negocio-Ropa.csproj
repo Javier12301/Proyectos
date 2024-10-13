@@ -231,6 +231,12 @@
     <Compile Include="Modal\buscadorProductos.Designer.cs">
       <DependentUpon>buscadorProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modal\Caja\mdAperturaCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modal\Caja\mdAperturaCaja.Designer.cs">
+      <DependentUpon>mdAperturaCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modal\Inventario\mdDetallesCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -321,6 +327,12 @@
     <Compile Include="Modal\Seguridad\mdUsuario.Designer.cs">
       <DependentUpon>mdUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modal\Venta\mdModificarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modal\Venta\mdModificarVenta.Designer.cs">
+      <DependentUpon>mdModificarVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principales\frmConfirmarContrasena.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -397,6 +409,9 @@
     <EmbeddedResource Include="Modal\buscadorProductos.resx">
       <DependentUpon>buscadorProductos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modal\Caja\mdAperturaCaja.resx">
+      <DependentUpon>mdAperturaCaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modal\Inventario\mdDetallesCompra.resx">
       <DependentUpon>mdDetallesCompra.cs</DependentUpon>
     </EmbeddedResource>
@@ -441,6 +456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modal\Seguridad\mdUsuario.resx">
       <DependentUpon>mdUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modal\Venta\mdModificarVenta.resx">
+      <DependentUpon>mdModificarVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principales\frmConfirmarContrasena.resx">
       <DependentUpon>frmConfirmarContrasena.cs</DependentUpon>
@@ -523,6 +541,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\checkList_Negro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Aumentar-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Decrementar_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cash-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\icons8-bank-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\icons8-credit-card-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\icons8-magnetic-card-28.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

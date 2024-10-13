@@ -92,6 +92,8 @@
             this.pnlControl.Name = "pnlControl";
             this.pnlControl.Size = new System.Drawing.Size(372, 32);
             this.pnlControl.TabIndex = 6;
+            this.pnlControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
+            this.pnlControl.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseMove);
             // 
             // gControlCerrar
             // 
@@ -120,6 +122,8 @@
             this.lblNombreForm.TabIndex = 0;
             this.lblNombreForm.Tag = "";
             this.lblNombreForm.Text = "Ajustar precio";
+            this.lblNombreForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
+            this.lblNombreForm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseMove);
             // 
             // btnSalir
             // 

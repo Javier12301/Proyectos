@@ -71,3 +71,5 @@ C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Sistema-Negocio-Ropa\obj\Debug\Sis
 C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Sistema-Negocio-Ropa\obj\Debug\Sistema_Negocio_Ropa.Modal.mdEntradaInventario.resources
 C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Sistema-Negocio-Ropa\obj\Debug\Sistema_Negocio_Ropa.Modal.Inventario.mdRegistrarCompras.resources
 C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Sistema-Negocio-Ropa\obj\Debug\Sistema_Negocio_Ropa.Modal.Inventario.mdDetallesCompra.resources
+C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Sistema-Negocio-Ropa\obj\Debug\Sistema_Negocio_Ropa.Modal.Venta.mdModificarVenta.resources
+C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Sistema-Negocio-Ropa\obj\Debug\Sistema_Negocio_Ropa.Modal.Caja.mdAperturaCaja.resources

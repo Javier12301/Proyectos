@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocio.Negocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace Negocio.Seguridad
     {
         // Almacenar el usuario en sesión
         public Usuario _usuario { get; private set; }
+        public Caja _caja { get; private set; }
 
         // Al crear una sesión, la idea es trabajar con un Singleton para que no se puedan crear más de una sesión
         private static Sesion _sesion;
@@ -61,6 +63,21 @@ namespace Negocio.Seguridad
                 else
                 {
                     throw new Exception("Otro usuario ya ha iniciado sesión.");
+                }
+            }
+        }
+
+        public static void IniciarCaja(Caja caja)
+        {
+            lock (_lock)
+            {
+                if (_sesion._caja == null)
+                {
+                    _sesion._caja = caja;
+                }
+                else
+                {
+                    throw new Exception("Ya existe una caja abierta.");
                 }
             }
         }

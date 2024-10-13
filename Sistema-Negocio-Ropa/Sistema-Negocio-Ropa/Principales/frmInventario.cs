@@ -186,21 +186,6 @@ namespace Sistema_Negocio_Ropa.Principales
                 permisosDeUsuario.Exportar = moduloActual.ListaAcciones.Any(accion => accion.Nombre == "Exportar");
             }
 
-            // Verificar si el módulo 'formCategorias' está permitido
-            Modulo moduloSalida = modulosPermitidos.FirstOrDefault(m => m.Nombre == "formInventario");
-            if (moduloSalida != null)
-            {
-                if (permisosDeUsuario.Comprar)
-                {
-                    btnSalidaMasiva.Enabled = true;
-                    btnSalidaMasiva.Visible = true;
-                }
-                else
-                {
-                    btnSalidaMasiva.Enabled = false;
-                    btnSalidaMasiva.Visible = false;
-                }
-            }
         }
 
         private void CargarFiltros()

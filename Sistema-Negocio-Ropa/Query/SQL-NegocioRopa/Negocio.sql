@@ -52,10 +52,12 @@ CREATE TABLE MetodoPago (
     Recargo DECIMAL(10,2) DEFAULT 0
 );
 
+
 -- VENTA
 CREATE TABLE Venta (
     VentaID INT IDENTITY PRIMARY KEY,
     UsuarioID INT REFERENCES Usuario(UsuarioID) ON DELETE SET NULL,
+	CajaID INT REFERENCES Caja(CajaID) ON DELETE SET NULL,
     TipoComprobante NVARCHAR(50),
     MontoPagado DECIMAL(10,2),
     MontoCambio DECIMAL(10,2),
@@ -73,24 +75,33 @@ CREATE TABLE Detalle_Venta (
     ProductoID INT REFERENCES Producto(ProductoID),
     PrecioVenta DECIMAL(10,2),
     Cantidad INT NOT NULL,
-    Descuento DECIMAL(10,2) DEFAULT 0,
     SubTotal DECIMAL(10,2)
 );
 
+CREATE TABLE Caja (
+    CajaID INT IDENTITY PRIMARY KEY,
+    UsuarioID INT REFERENCES Usuario(UsuarioID),
+    MontoInicial DECIMAL(10,2) NOT NULL,
+    MontoFinal DECIMAL(10,2),
+    FechaApertura DATETIME DEFAULT GETDATE(),
+    FechaCierre DATETIME,
+    Estado BIT DEFAULT 1,
+);
 
 -- NEGOCIO
 CREATE TABLE Negocio (
     NegocioID INT IDENTITY PRIMARY KEY,
-    Nombre NVARCHAR(60) NOT NULL,
+    Nombre NVARCHAR(60),
+    Direccion NVARCHAR(60),
+    Ciudad NVARCHAR(60),
+    CodigoPostal NVARCHAR(20),
+    NombreCompletoPropietario NVARCHAR(60),
+    Telefono NVARCHAR(60),
     TipoDocumento NVARCHAR(60) DEFAULT 'CUIT',
     Documento NVARCHAR(60),
-    Direccion NVARCHAR(60),
-    Telefono NVARCHAR(60),
-    Correo NVARCHAR(60)
 );
 
-INSERT INTO Negocio (Nombre, TipoDocumento, Documento, Direccion, Telefono, Correo)
-VALUES ('Deportes', 'CUIT', '27-44608055-3', 'Av. Roca', '123456789', 'contacto@gmail.com');
-GO
 
-SELECT * FROM Producto
+
+SELECT * FROM MetodoPago
+

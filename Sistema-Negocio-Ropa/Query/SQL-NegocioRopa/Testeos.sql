@@ -22,3 +22,5 @@ WHERE ProductoID = 31
 STOCK ACTUAL: 262
 ESPERADO: 255
 */
+
+SELECT * FROM MetodoPago

@@ -38,5 +38,24 @@ namespace Sistema_Negocio_Ropa.Modal
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private Point mousePosicion;
+        private void pnlTop_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                mousePosicion = e.Location;
+            }
+        }
+
+        private void pnlTop_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                int deltaX = e.X - mousePosicion.X;
+                int deltaY = e.Y - mousePosicion.Y;
+                this.Location = new Point(this.Location.X + deltaX, this.Location.Y + deltaY);
+            }
+        }
     }
 }

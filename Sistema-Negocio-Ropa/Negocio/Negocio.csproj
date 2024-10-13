@@ -41,12 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Negocio\Caja.cs" />
     <Compile Include="Negocio\Categoria.cs" />
     <Compile Include="Negocio\Compra.cs" />
     <Compile Include="Negocio\DetalleCompra.cs" />
     <Compile Include="Negocio\DetalleVenta.cs" />
     <Compile Include="Negocio\MetodoPago.cs" />
-    <Compile Include="Negocio\Negocio.cs" />
+    <Compile Include="Negocio\NegocioM.cs" />
     <Compile Include="Negocio\Operacion.cs" />
     <Compile Include="Negocio\Producto.cs" />
     <Compile Include="Negocio\Venta.cs" />
