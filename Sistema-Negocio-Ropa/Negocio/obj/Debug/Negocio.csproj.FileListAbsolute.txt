@@ -1,6 +1,0 @@
-C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Negocio\bin\Debug\Negocio.dll
-C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Negocio\bin\Debug\Negocio.pdb
-C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
-C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
-C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Negocio\obj\Debug\Negocio.dll
-C:\Users\javie\Proyectos\Sistema-Negocio-Ropa\Negocio\obj\Debug\Negocio.pdb
